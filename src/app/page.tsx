@@ -21,11 +21,15 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center">
           <div className="mr-6">
             <Link href="/" className="flex items-center space-x-2">
-              <Globe className="h-6 w-6" />
-              <span className="font-bold text-xl">EOViz</span>
+              <img 
+                src="/logos/eoviz-logo.png" 
+                alt="eoViz" 
+                className="h-8 w-auto" 
+              />
+              <span className="font-bold text-xl">eoViz</span>
             </Link>
           </div>
           <div className="flex items-center space-x-6 text-sm font-medium">
@@ -42,7 +46,7 @@ export default function HomePage() {
               </Link>
             </Button>
             <Button size="sm" asChild>
-              <Link href="/sandbox">Try Demo</Link>
+              <Link href="/sandbox">Explore Examples</Link>
             </Button>
           </div>
         </div>
@@ -50,43 +54,57 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
-              <Badge variant="secondary" className="mb-4">
-                Open Source • Self-Hosted • Modular
-              </Badge>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Badge variant="secondary">
+                  Open Source • Community-Driven • Mission-Focused
+                </Badge>
+              </div>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                The fastest way to deploy 
-                <span className="text-blue-600"> Earth observation</span> communication
+                Connecting Earth science with
+                <span className="text-blue-600"> the people who need it most</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Modular geospatial storytelling platform that connects great science with broader audiences. 
-                Deploy like Jekyll, customize like React.
+                We built eoViz to bridge the gap between groundbreaking Earth science and the communities, 
+                policymakers, and researchers who can act on it. Open source tools for meaningful impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
                   <Link href="/sandbox">
                     <Play className="h-4 w-4 mr-2" />
-                    Try Live Demo
+                    Explore Examples
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link href="/docs">
                     <BookOpen className="h-4 w-4 mr-2" />
-                    View Documentation
+                    Learn How
                   </Link>
                 </Button>
               </div>
             </div>
             <div className="relative">
-              {/* Placeholder for demo embed */}
-              <Card className="bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-dashed">
-                <CardContent className="p-8 text-center">
-                  <Globe className="h-16 w-16 mx-auto mb-4 text-blue-600" />
-                  <p className="text-sm text-muted-foreground">
-                    Interactive demo will be embedded here
-                  </p>
+              {/* Featured Demo Video */}
+              <Card className="overflow-hidden">
+                <CardContent className="p-0">
+                  <video 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    className="w-full h-auto" 
+                  >
+                    <source src="/videos/demo-stories.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h3 className="font-semibold text-sm text-blue-900">Real Impact in Action</h3>
+                    <p className="text-xs text-blue-700 mt-1">
+                      See how storytelling helps emergency managers understand wildfire risk
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -94,16 +112,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* NASA Credit Section */}
+      <section className="py-12 border-b bg-slate-50/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
+            <div className="flex items-center gap-4">
+              {/* NASA Logo */}
+              <img 
+                src="/logos/nasa-logo.svg" 
+                alt="NASA" 
+                className="w-16 h-16" 
+              />
+              <div>
+                <p className="text-lg font-semibold text-slate-900">
+                  Supported by NASA IMPACT
+                </p>
+                <p className="text-sm text-slate-600">
+                  Years of building tools with NASA taught us that great Earth science 
+                  often stays locked in academic papers. We created eoViz to change that.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Product Suite Section */}
       <section className="py-20 bg-muted/50">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Modular Product Suite
+              Three Ways to Solve Your Challenge
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Three complementary products that work independently or together, 
-              following the proven eoAPI architecture pattern.
+              Whether you're crafting stories, building tools, or organizing data, 
+              we've built components that work together or stand alone.
             </p>
           </div>
 
@@ -117,18 +160,20 @@ export default function HomePage() {
                 </div>
                 <CardTitle>eoStories</CardTitle>
                 <CardDescription>
-                  Narrative-driven content framework with engaging geospatial tools
+                  Help people understand complex Earth science through compelling narratives
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• React/MDX storytelling components</li>
-                  <li>• Integrated geospatial widgets</li>
-                  <li>• White-label customization</li>
-                  <li>• Export to multiple formats</li>
+                  <li>• Transform research into accessible stories</li>
+                  <li>• Combine maps, charts, and narrative</li>
+                  <li>• Share across web, PDF, and presentations</li>
+                  <li>• Built for scientists and communicators</li>
                 </ul>
-                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform">
-                  Learn more <ArrowRight className="h-4 w-4 ml-1" />
+                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
+                  <Link href="/products/eostories">
+                    Learn more <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -138,22 +183,24 @@ export default function HomePage() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <Code className="h-8 w-8 text-green-600" />
-                  <Badge variant="outline">Components</Badge>
+                  <Badge variant="outline">Tools</Badge>
                 </div>
-                <CardTitle>eoComponents</CardTitle>
+                <CardTitle>eoTools</CardTitle>
                 <CardDescription>
-                  Reusable React components for custom geospatial applications
+                  Get custom visualization tools faster and cheaper than building from scratch
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• Pre-built visualization components</li>
-                  <li>• Time-series and animation tools</li>
-                  <li>• 80% solution with opinionated defaults</li>
-                  <li>• Declarative programming style</li>
+                  <li>• Custom tools for your specific data and workflows</li>
+                  <li>• Faster development using proven components</li>
+                  <li>• Alternative to expensive GIS team buildouts</li>
+                  <li>• Move beyond Google Earth Engine limitations</li>
                 </ul>
-                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform">
-                  Explore components <ArrowRight className="h-4 w-4 ml-1" />
+                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
+                  <Link href="/products/eotools">
+                    See example tools <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -167,18 +214,20 @@ export default function HomePage() {
                 </div>
                 <CardTitle>eoCatalogs</CardTitle>
                 <CardDescription>
-                  Complete websites that organize data, tools, and stories
+                  Create platforms where people can discover and access Earth science datasets
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• STAC-native data discovery</li>
-                  <li>• Organization branding</li>
-                  <li>• Integrated content management</li>
-                  <li>• Cohesive user experience</li>
+                  <li>• Make complex datasets discoverable</li>
+                  <li>• Integrate stories with data access</li>
+                  <li>• Connect researchers with resources</li>
+                  <li>• Support institutional branding</li>
                 </ul>
-                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform">
-                  View examples <ArrowRight className="h-4 w-4 ml-1" />
+                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
+                  <Link href="/products/eocatalogs">
+                    View examples <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -188,11 +237,11 @@ export default function HomePage() {
 
       {/* Value Proposition */}
       <section className="py-20">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                From data to engagement in minutes, not months
+                From research to real-world action
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -200,9 +249,10 @@ export default function HomePage() {
                     <Zap className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Fast Deployment</h3>
+                    <h3 className="font-semibold mb-2">Built for Impact</h3>
                     <p className="text-muted-foreground">
-                      Deploy like Jekyll with simple configuration, but get React-level customization when you need it.
+                      Every tool we create is shaped by real challenges faced by emergency responders, 
+                      policymakers, and researchers working to understand our changing planet.
                     </p>
                   </div>
                 </div>
@@ -211,9 +261,10 @@ export default function HomePage() {
                     <Users className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Audience Connection</h3>
+                    <h3 className="font-semibold mb-2">Community-Driven</h3>
                     <p className="text-muted-foreground">
-                      Connect great science with broader audiences beyond scientist-to-scientist communication.
+                      Open source means everyone benefits. Contribute code, share improvements, 
+                      and help us build tools that serve the global Earth science community.
                     </p>
                   </div>
                 </div>
@@ -222,9 +273,10 @@ export default function HomePage() {
                     <Layers className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Modular Architecture</h3>
+                    <h3 className="font-semibold mb-2">Your Infrastructure, Your Control</h3>
                     <p className="text-muted-foreground">
-                      Use individual components or the full suite. Self-hosted, open-source, and designed for your workflow.
+                      Self-hosted and modular by design. Use what you need, modify what you want, 
+                      and maintain full control over your data and deployment.
                     </p>
                   </div>
                 </div>
@@ -248,7 +300,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Interactive component showcase coming soon
+                    Component showcase
                   </p>
                 </CardContent>
               </Card>
@@ -259,25 +311,25 @@ export default function HomePage() {
 
       {/* Workshop CTA */}
       <section className="py-20 bg-blue-50">
-        <div className="container text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Badge variant="secondary" className="mb-4">Coming Next Month</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Live Workshop: Building Stories with EOViz
+            Join the eoViz Community
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join us for a hands-on workshop where we'll create compelling geospatial stories 
-            using EOViz tools. Perfect for researchers, communicators, and developers.
+            Whether you're a researcher with a story to tell, a developer building tools, 
+            or an organization serving communities—let's build something meaningful together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="/workshop">
-                Reserve Your Spot
+                Learn at Our Workshop
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/sandbox">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Try Workshop Preview
+              <Link href="https://github.com" target="_blank">
+                <Github className="h-4 w-4 mr-2" />
+                Contribute on GitHub
               </Link>
             </Button>
           </div>
@@ -286,12 +338,16 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="border-t bg-background">
-        <div className="container py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Globe className="h-5 w-5" />
-                <span className="font-bold">EOViz</span>
+                <img 
+                  src="/logos/eoviz-logo.png" 
+                  alt="eoViz" 
+                  className="h-6 w-auto" 
+                />
+                <span className="font-bold">eoViz</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Modular geospatial storytelling platform for Earth observation data.
@@ -301,7 +357,7 @@ export default function HomePage() {
               <h3 className="font-semibold mb-3">Products</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/products" className="hover:underline">eoStories</Link></li>
-                <li><Link href="/products" className="hover:underline">eoComponents</Link></li>
+                <li><Link href="/products" className="hover:underline">eoTools</Link></li>
                 <li><Link href="/products" className="hover:underline">eoCatalogs</Link></li>
               </ul>
             </div>
@@ -323,8 +379,14 @@ export default function HomePage() {
             </div>
           </div>
           <Separator className="my-8" />
-          <div className="text-center text-sm text-muted-foreground">
-            © 2025 EOViz. Open source software for Earth observation storytelling.
+          <div className="text-center text-sm text-muted-foreground space-y-2">
+            <div>
+              © 2025 eoViz. Open source tools for Earth observation storytelling.
+            </div>
+            <div>
+              Built with support from NASA IMPACT and the Earth Science Data Systems Program. 
+              Part of the global effort to make Earth science data more accessible and actionable.
+            </div>
           </div>
         </div>
       </footer>
