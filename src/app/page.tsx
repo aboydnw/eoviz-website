@@ -63,12 +63,12 @@ export default function HomePage() {
                 </Badge>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                Connecting Earth science with
-                <span className="text-blue-600"> the people who need it most</span>
+                Help your research reach
+                <span className="text-blue-600"> the people who can act on it</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                We built eoViz to bridge the gap between groundbreaking Earth science and the communities, 
-                policymakers, and researchers who can act on it. Open source tools for meaningful impact.
+                Turn your geospatial research into compelling stories and interactive tools that 
+                decision-makers actually understand. Keep full control of your data while maximizing its impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
@@ -142,11 +142,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Three Ways to Solve Your Challenge
+              Three Ways to Share Your Research Impact
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Whether you're crafting stories, building tools, or organizing data, 
-              we've built components that work together or stand alone.
+              Whether you need to tell compelling stories, create custom visualization tools, 
+              or organize complex datasets, we help research organizations maximize their impact.
             </p>
           </div>
 
@@ -160,15 +160,15 @@ export default function HomePage() {
                 </div>
                 <CardTitle>eoStories</CardTitle>
                 <CardDescription>
-                  Help people understand complex Earth science through compelling narratives
+                  Turn complex research into narratives that stakeholders actually understand and remember
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• Transform research into accessible stories</li>
-                  <li>• Combine maps, charts, and narrative</li>
-                  <li>• Share across web, PDF, and presentations</li>
-                  <li>• Built for scientists and communicators</li>
+                  <li>• Decision-makers understand your research impact</li>
+                  <li>• Funders see clear evidence of your work's value</li>
+                  <li>• Media coverage that accurately represents your findings</li>
+                  <li>• Policy makers have the context they need to act</li>
                 </ul>
                 <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
                   <Link href="/products/eostories">
@@ -187,15 +187,15 @@ export default function HomePage() {
                 </div>
                 <CardTitle>eoTools</CardTitle>
                 <CardDescription>
-                  Get custom visualization tools faster and cheaper than building from scratch
+                  Get custom visualization tools that show your unique data exactly how stakeholders need to see it
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• Custom tools for your specific data and workflows</li>
-                  <li>• Faster development using proven components</li>
-                  <li>• Alternative to expensive GIS team buildouts</li>
+                  <li>• Your data gets the specialized interface it deserves</li>
+                  <li>• Skip expensive GIS team buildouts</li>
                   <li>• Move beyond Google Earth Engine limitations</li>
+                  <li>• Stakeholders interact with data, not just view it</li>
                 </ul>
                 <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
                   <Link href="/products/eotools">
@@ -214,15 +214,15 @@ export default function HomePage() {
                 </div>
                 <CardTitle>eoCatalogs</CardTitle>
                 <CardDescription>
-                  Create platforms where people can discover and access Earth science datasets
+                  Organize multiple datasets and research projects so people can actually find and use your work
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• Make complex datasets discoverable</li>
-                  <li>• Integrate stories with data access</li>
-                  <li>• Connect researchers with resources</li>
-                  <li>• Support institutional branding</li>
+                  <li>• Researchers discover your datasets easily</li>
+                  <li>• Institutional branding showcases your work</li>
+                  <li>• Connect data to the stories that explain it</li>
+                  <li>• Multi-project coordination without chaos</li>
                 </ul>
                 <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
                   <Link href="/products/eocatalogs">
@@ -241,42 +241,42 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                From research to real-world action
+                Your data stays yours, your impact grows
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 p-2 rounded-lg">
-                    <Zap className="h-5 w-5 text-blue-600" />
+                    <Layers className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Built for Impact</h3>
+                    <h3 className="font-semibold mb-2">Complete Data Control</h3>
                     <p className="text-muted-foreground">
-                      Every tool we create is shaped by real challenges faced by emergency responders, 
-                      policymakers, and researchers working to understand our changing planet.
+                      Self-hosted means your sensitive research data never leaves your infrastructure. 
+                      No vendor lock-in, no usage fees, no privacy concerns with third-party platforms.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="bg-green-100 p-2 rounded-lg">
-                    <Users className="h-5 w-5 text-green-600" />
+                    <Zap className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Community-Driven</h3>
+                    <h3 className="font-semibold mb-2">Built for Research Organizations</h3>
                     <p className="text-muted-foreground">
-                      Open source means everyone benefits. Contribute code, share improvements, 
-                      and help us build tools that serve the global Earth science community.
+                      Every tool is shaped by real challenges faced by research teams who need to 
+                      communicate complex findings to stakeholders, funders, and decision-makers.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="bg-purple-100 p-2 rounded-lg">
-                    <Layers className="h-5 w-5 text-purple-600" />
+                    <Users className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Your Infrastructure, Your Control</h3>
+                    <h3 className="font-semibold mb-2">Open Source Community</h3>
                     <p className="text-muted-foreground">
-                      Self-hosted and modular by design. Use what you need, modify what you want, 
-                      and maintain full control over your data and deployment.
+                      Contribute improvements, customize for your needs, and benefit from shared 
+                      development. Built by researchers, for researchers.
                     </p>
                   </div>
                 </div>
@@ -312,24 +312,29 @@ export default function HomePage() {
       {/* Workshop CTA */}
       <section className="py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge variant="secondary" className="mb-4">Coming Next Month</Badge>
+          <Badge variant="secondary" className="mb-4">Get Started</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Join the eoViz Community
+            Ready to transform how you share your research?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Whether you're a researcher with a story to tell, a developer building tools, 
-            or an organization serving communities—let's build something meaningful together.
+            Start with our hands-on workshop, explore examples in the sandbox, 
+            or dive straight into the documentation to begin building.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="/workshop">
-                Learn at Our Workshop
+                Join Our Workshop
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/sandbox">
+                Explore Examples
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link href="https://github.com" target="_blank">
                 <Github className="h-4 w-4 mr-2" />
-                Contribute on GitHub
+                View on GitHub
               </Link>
             </Button>
           </div>
