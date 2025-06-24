@@ -112,73 +112,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Tools Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Tools Built for Real Challenges
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Born from years of NASA-funded research, eoViz helps organizations turn complex 
-              Earth science data into clear, actionable insights.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  className="w-full h-48 object-cover" 
-                >
-                  <source src="/videos/demo-fire-event-explorer.mp4" type="video/mp4" />
-                </video>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Wildfire Risk Explorer</h3>
-                  <p className="text-muted-foreground mb-4">
-                    When wildfires threaten communities, emergency managers need clear, immediate access 
-                    to risk data. This tool transforms satellite data into actionable intelligence.
-                  </p>
-                  <div className="flex items-center space-x-2">
-                    <Badge variant="outline">Emergency Response</Badge>
-                    <Badge variant="outline">Active Use</Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  className="w-full h-48 object-cover" 
-                >
-                  <source src="/videos/demo-data-catalog.mp4" type="video/mp4" />
-                </video>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Climate Data Portal</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Policymakers need accessible climate data to make informed decisions. This portal 
-                    organizes complex datasets into discoverable, understandable resources.
-                  </p>
-                  <div className="flex items-center space-x-2">
-                    <Badge variant="outline">Policy Support</Badge>
-                    <Badge variant="outline">Global Access</Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* NASA Credit Section */}
       <section className="py-12 border-b bg-slate-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,8 +170,10 @@ export default function HomePage() {
                   <li>• Share across web, PDF, and presentations</li>
                   <li>• Built for scientists and communicators</li>
                 </ul>
-                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform">
-                  Learn more <ArrowRight className="h-4 w-4 ml-1" />
+                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
+                  <Link href="/products/eostories">
+                    Learn more <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -248,22 +183,24 @@ export default function HomePage() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <Code className="h-8 w-8 text-green-600" />
-                  <Badge variant="outline">Components</Badge>
+                  <Badge variant="outline">Tools</Badge>
                 </div>
-                <CardTitle>eoComponents</CardTitle>
+                <CardTitle>eoTools</CardTitle>
                 <CardDescription>
-                  Build interactive tools that help people explore and understand Earth data
+                  Get custom visualization tools faster and cheaper than building from scratch
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• Map widgets that work out of the box</li>
-                  <li>• Time-series tools for trend analysis</li>
-                  <li>• Designed for rapid prototyping</li>
-                  <li>• From simple demos to production tools</li>
+                  <li>• Custom tools for your specific data and workflows</li>
+                  <li>• Faster development using proven components</li>
+                  <li>• Alternative to expensive GIS team buildouts</li>
+                  <li>• Move beyond Google Earth Engine limitations</li>
                 </ul>
-                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform">
-                  Explore components <ArrowRight className="h-4 w-4 ml-1" />
+                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
+                  <Link href="/products/eotools">
+                    See example tools <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -287,8 +224,10 @@ export default function HomePage() {
                   <li>• Connect researchers with resources</li>
                   <li>• Support institutional branding</li>
                 </ul>
-                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform">
-                  View examples <ArrowRight className="h-4 w-4 ml-1" />
+                <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
+                  <Link href="/products/eocatalogs">
+                    View examples <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -418,7 +357,7 @@ export default function HomePage() {
               <h3 className="font-semibold mb-3">Products</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/products" className="hover:underline">eoStories</Link></li>
-                <li><Link href="/products" className="hover:underline">eoComponents</Link></li>
+                <li><Link href="/products" className="hover:underline">eoTools</Link></li>
                 <li><Link href="/products" className="hover:underline">eoCatalogs</Link></li>
               </ul>
             </div>

@@ -75,73 +75,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Tools in Action Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Tools in Action
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              See real eoViz implementations solving complex geospatial challenges
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Card className="overflow-hidden">
-                <CardContent className="p-0">
-                  <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                    className="w-full h-auto" 
-                  >
-                    <source src="/videos/demo-mobile-climate-mapper.mp4" type="video/mp4" />
-                  </video>
-                  <div className="p-4">
-                    <h3 className="font-semibold mb-2">Mobile Climate Mapper</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Interactive climate scenarios with global animations
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Solving real challenges</h3>
-                <p className="text-muted-foreground mb-6">
-                  Each tool you see here emerged from conversations with researchers, emergency managers, 
-                  and policy makers who needed better ways to share critical Earth science insights.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">Global</div>
-                  <div className="text-sm text-muted-foreground">Reach & Access</div>
-                </div>
-                <div className="p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-green-600 mb-1">Open</div>
-                  <div className="text-sm text-muted-foreground">Source & Community</div>
-                </div>
-                <div className="p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-purple-600 mb-1">Impact</div>
-                  <div className="text-sm text-muted-foreground">Driven & Measurable</div>
-                </div>
-                <div className="p-4 bg-white rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-orange-600 mb-1">Mission</div>
-                  <div className="text-sm text-muted-foreground">Focused & Collaborative</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Product Overview Grid */}
       <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,23 +135,23 @@ export default function ProductsPage() {
                 </div>
 
                 <Button className="w-full group-hover:bg-blue-700 transition-colors" asChild>
-                  <Link href="/sandbox">
+                  <Link href="/products/eostories">
                     Try eoStories <ArrowRight className="h-4 w-4 ml-2" />
                   </Link>
                 </Button>
               </CardContent>
             </Card>
 
-            {/* eoComponents */}
+            {/* eoTools */}
             <Card className="relative group hover:shadow-xl transition-all duration-300 border-2">
               <CardHeader className="text-center pb-4">
                 <div className="mx-auto mb-4 p-3 bg-green-100 rounded-full w-fit">
                   <Code className="h-8 w-8 text-green-600" />
                 </div>
-                <Badge variant="outline" className="w-fit mx-auto mb-2">Components</Badge>
-                <CardTitle className="text-2xl">eoComponents</CardTitle>
+                <Badge variant="outline" className="w-fit mx-auto mb-2">Tools</Badge>
+                <CardTitle className="text-2xl">eoTools</CardTitle>
                 <CardDescription className="text-base">
-                  Reusable React components for custom geospatial applications
+                  Get custom visualization tools faster and cheaper than building from scratch
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -239,15 +172,15 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Frontend developers</span>
+                      <span>Organizations with custom datasets</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Custom application builders</span>
+                      <span>Teams outgrowing Google Earth Engine</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Rapid prototyping teams</span>
+                      <span>Alternative to expensive GIS buildouts</span>
                     </li>
                   </ul>
                 </div>
@@ -255,17 +188,17 @@ export default function ProductsPage() {
                 <div>
                   <h4 className="font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2 text-sm">
-                    <li>• Ready-to-use map and chart widgets</li>
-                    <li>• Time-slider and animation tools</li>
-                    <li>• Works out-of-the-box with smart defaults</li>
-                    <li>• Simple configuration, powerful results</li>
-                    <li>• Full TypeScript support included</li>
+                    <li>• Custom tools for your specific data and workflows</li>
+                    <li>• Faster development using proven components</li>
+                    <li>• Reliable user experience and performance</li>
+                    <li>• Cost-effective alternative to custom builds</li>
+                    <li>• Built on open source foundations</li>
                   </ul>
                 </div>
 
                 <Button className="w-full group-hover:bg-green-700 transition-colors" asChild>
-                  <Link href="/sandbox">
-                    Explore Components <ArrowRight className="h-4 w-4 ml-2" />
+                  <Link href="/products/eotools">
+                    See Example Tools <ArrowRight className="h-4 w-4 ml-2" />
                   </Link>
                 </Button>
               </CardContent>
@@ -326,106 +259,8 @@ export default function ProductsPage() {
                 </div>
 
                 <Button className="w-full group-hover:bg-purple-700 transition-colors" asChild>
-                  <Link href="/sandbox">
+                  <Link href="/products/eocatalogs">
                     View Examples <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Approaches */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ways to Get Involved
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Whether you're exploring on your own or need guidance, we're here to help you succeed 
-              with open source tools and collaborative support.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Light Customization */}
-            <Card>
-              <CardHeader className="text-center">
-                <Zap className="h-12 w-12 mx-auto mb-4 text-blue-600" />
-                <CardTitle>Community</CardTitle>
-                <CardDescription>Explore, learn, and contribute with community support</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">~10 lines</div>
-                  <p className="text-sm text-muted-foreground">of configuration code</p>
-                </div>
-                <ul className="space-y-2 text-sm">
-                  <li>• Download and start building</li>
-                  <li>• Follow documentation guides</li>
-                  <li>• Join community discussions</li>
-                  <li>• Contribute improvements</li>
-                </ul>
-                <Button variant="outline" className="w-full" asChild>
-                  <Link href="/docs">
-                    <Download className="h-4 w-4 mr-2" />
-                    Get Started
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Medium Customization */}
-            <Card>
-              <CardHeader className="text-center">
-                <Wrench className="h-12 w-12 mx-auto mb-4 text-green-600" />
-                <CardTitle>Collaboration</CardTitle>
-                <CardDescription>Work together with our team for custom solutions</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">~1 week</div>
-                  <p className="text-sm text-muted-foreground">implementation time</p>
-                </div>
-                <ul className="space-y-2 text-sm">
-                  <li>• Collaborative development</li>
-                  <li>• Tailored tool creation</li>
-                  <li>• Knowledge sharing sessions</li>
-                  <li>• Ongoing partnership</li>
-                </ul>
-                <Button variant="outline" className="w-full" asChild>
-                  <Link href="#contact">
-                    <Users className="h-4 w-4 mr-2" />
-                    Contact Us
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Heavy Customization */}
-            <Card>
-              <CardHeader className="text-center">
-                <Rocket className="h-12 w-12 mx-auto mb-4 text-purple-600" />
-                <CardTitle>Partnership</CardTitle>
-                <CardDescription>Deep collaboration for institutional transformation</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">~1 month</div>
-                  <p className="text-sm text-muted-foreground">development timeline</p>
-                </div>
-                <ul className="space-y-2 text-sm">
-                  <li>• Embedded team collaboration</li>
-                  <li>• Institutional capacity building</li>
-                  <li>• Long-term strategic alignment</li>
-                  <li>• Community impact focus</li>
-                </ul>
-                <Button variant="outline" className="w-full" asChild>
-                  <Link href="#contact">
-                    <Rocket className="h-4 w-4 mr-2" />
-                    Begin Collaboration
                   </Link>
                 </Button>
               </CardContent>
@@ -440,11 +275,12 @@ export default function ProductsPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Built on proven architecture
+                Works seamlessly with modern geospatial data
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                eoViz follows the same modular pattern as other successful NASA Earth observation 
-                tools. Each component works independently but integrates seamlessly when needed.
+                eoViz naturally extends cloud-native geospatial best practices. If you're already 
+                using cloud-optimized data formats like STAC and COG, eoViz will feel like a 
+                natural next step. But you don't need a full data infrastructure to get started.
               </p>
               
               <div className="space-y-6">
@@ -453,9 +289,10 @@ export default function ProductsPage() {
                     <Database className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Data Layer</h3>
+                    <h3 className="font-semibold mb-2">Cloud-Native Ready</h3>
                     <p className="text-muted-foreground text-sm">
-                      Compatible with standard geospatial data formats and any satellite or Earth observation data source.
+                      Perfect companion to eoAPI and STAC workflows. Instantly visualize analysis-ready, 
+                      cloud-optimized datasets without additional processing.
                     </p>
                   </div>
                 </div>
@@ -465,9 +302,10 @@ export default function ProductsPage() {
                     <Palette className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Presentation Layer</h3>
+                    <h3 className="font-semibold mb-2">Flexible Data Support</h3>
                     <p className="text-muted-foreground text-sm">
-                      Modern web components optimized for maps, charts, and interactive storytelling.
+                      Start simple with CSV or GeoJSON files. Scale up to petabyte-scale satellite 
+                      data as your needs grow. No infrastructure overhaul required.
                     </p>
                   </div>
                 </div>
@@ -477,9 +315,10 @@ export default function ProductsPage() {
                     <Globe className="h-5 w-5 text-purple-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Deployment Layer</h3>
+                    <h3 className="font-semibold mb-2">Deploy Anywhere</h3>
                     <p className="text-muted-foreground text-sm">
-                      Deploy to Vercel, Netlify, AWS, or any hosting platform. Self-hosted and open source.
+                      Modern web architecture works with any hosting platform. Self-hosted control 
+                      with cloud-scale performance when you need it.
                     </p>
                   </div>
                 </div>
@@ -499,7 +338,7 @@ export default function ProductsPage() {
                         eoStories
                       </div>
                       <div className="bg-green-200 h-16 rounded flex items-center justify-center text-xs font-medium">
-                        eoComponents
+                        eoTools
                       </div>
                       <div className="bg-purple-200 h-16 rounded flex items-center justify-center text-xs font-medium">
                         eoCatalogs
@@ -569,7 +408,7 @@ export default function ProductsPage() {
               <h3 className="font-semibold mb-3">Products</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/products" className="hover:underline">eoStories</Link></li>
-                <li><Link href="/products" className="hover:underline">eoComponents</Link></li>
+                <li><Link href="/products" className="hover:underline">eoTools</Link></li>
                 <li><Link href="/products" className="hover:underline">eoCatalogs</Link></li>
               </ul>
             </div>
