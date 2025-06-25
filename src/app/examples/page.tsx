@@ -2,21 +2,44 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ScrollAwareNavigation } from '@/components/layout/ScrollAwareNavigation'
+import { OptimizedImage } from '@/components/shared/OptimizedImage'
 import { 
   ExternalLink, 
-  BookOpen, 
-  Code, 
-  Layers,
   MapPin,
   Flame,
   Globe,
-  Satellite
+  Satellite,
+  Play
 } from 'lucide-react'
 
-const examples = [
+// Type definitions for better code clarity
+interface ExamplePreview {
+  type: 'video' | 'image'
+  src: string
+  poster?: string
+  alt: string
+}
+
+interface Example {
+  id: string
+  title: string
+  description: string
+  challenge: string
+  solution: string
+  useCase: 'Climate Policy' | 'Emergency Response' | 'Scientific Research' | 'Education & Outreach'
+  products: Array<'Stories' | 'Tools' | 'Catalogs'>
+  icon: React.ComponentType<{ className?: string }>
+  color: 'green' | 'red' | 'blue' | 'purple'
+  url: string
+  preview: ExamplePreview
+  audience: string
+  impact: string
+}
+
+const examples: Example[] = [
   {
     id: 'co2-emissions',
     title: 'Quantifying CO2 Emissions at Neighborhood Scale',
@@ -27,7 +50,13 @@ const examples = [
     products: ['Stories', 'Tools'],
     icon: MapPin,
     color: 'green',
-    embedUrl: 'https://earth.gov/ghgcenter/stories/vulcan',
+    url: 'https://earth.gov/ghgcenter/stories/vulcan',
+    preview: {
+      type: 'video',
+      src: '/videos/examples/co2-emissions-demo.mp4',
+      poster: '/images/examples/co2-emissions-poster.jpg',
+      alt: 'CO2 emissions visualization showing neighborhood-level data'
+    },
     audience: 'City planners, climate policymakers, environmental justice advocates',
     impact: 'Enables targeted climate interventions at the neighborhood level'
   },
@@ -41,7 +70,13 @@ const examples = [
     products: ['Tools'],
     icon: Flame,
     color: 'red',
-    embedUrl: 'https://www.earthdata.nasa.gov/dashboard/tools/fire-event-explorer',
+    url: 'https://www.earthdata.nasa.gov/dashboard/tools/fire-event-explorer',
+    preview: {
+      type: 'video',
+      src: '/videos/examples/fire-perimeter-demo.mp4', 
+      poster: '/images/examples/fire-perimeter-poster.jpg',
+      alt: 'Fire perimeter growth visualization over time'
+    },
     audience: 'Emergency managers, firefighters, evacuation coordinators',
     impact: 'Faster, more informed emergency response decisions'
   },
@@ -55,7 +90,12 @@ const examples = [
     products: ['Stories', 'Tools', 'Catalogs'],
     icon: Satellite,
     color: 'blue',
-    embedUrl: 'https://www.earthdata.nasa.gov/dashboard/',
+    url: 'https://www.earthdata.nasa.gov/dashboard/',
+    preview: {
+      type: 'image',
+      src: '/images/examples/nasa-dashboard-screenshot.jpg',
+      alt: 'NASA Earth data dashboard showing analysis-ready datasets'
+    },
     audience: 'Earth scientists, data engineers, research organizations',
     impact: 'Faster time from data to discovery, reduced technical barriers'
   },
@@ -69,7 +109,13 @@ const examples = [
     products: ['Tools', 'Catalogs'],
     icon: Globe,
     color: 'purple',
-    embedUrl: 'https://earth.gov/',
+    url: 'https://earth.gov/',
+    preview: {
+      type: 'video',
+      src: '/videos/examples/earth-visualizations-demo.mp4',
+      poster: '/images/examples/earth-viz-poster.jpg', 
+      alt: 'NASA Earth science visualization platform showcase'
+    },
     audience: 'Educators, science communicators, public engagement teams',
     impact: 'Broader public understanding of Earth science through better access to visualizations'
   }
@@ -86,6 +132,62 @@ const useCaseColors = {
   'Emergency Response': 'bg-red-50 border-red-200',
   'Scientific Research': 'bg-blue-50 border-blue-200',
   'Education & Outreach': 'bg-purple-50 border-purple-200'
+}
+
+// Simplified MediaPreview component
+function MediaPreview({ example }: { example: Example }) {
+  return (
+    <div 
+      className="relative group cursor-pointer" 
+      onClick={() => window.open(example.url, '_blank')}
+    >
+      <div className="aspect-video bg-slate-100 rounded-t-lg overflow-hidden relative">
+        {example.preview.type === 'video' ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={example.preview.poster}
+            className="w-full h-full object-cover"
+          >
+            <source src={example.preview.src} type="video/mp4" />
+            {/* Fallback to poster image if video fails */}
+            {example.preview.poster && (
+              <OptimizedImage
+                src={example.preview.poster}
+                alt={example.preview.alt}
+                width={640}
+                height={360}
+                className="w-full h-full object-cover"
+              />
+            )}
+          </video>
+        ) : (
+          <OptimizedImage
+            src={example.preview.src}
+            alt={example.preview.alt}
+            width={640}
+            height={360}
+            className="w-full h-full object-cover"
+          />
+        )}
+        
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200 flex items-center justify-center">
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-lg">
+              {example.preview.type === 'video' ? (
+                <Play className="h-8 w-8 text-slate-700" />
+              ) : (
+                <ExternalLink className="h-6 w-6 text-slate-700" />
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function ExamplesPage() {
@@ -107,23 +209,17 @@ export default function ExamplesPage() {
               Real-world examples of how research organizations are using eoViz components 
               to bridge the gap between Earth science and the people who need it most.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Badge variant="outline" className="text-sm">
-                <MapPin className="h-3 w-3 mr-1" />
-                Climate Policy
-              </Badge>
-              <Badge variant="outline" className="text-sm">
-                <Flame className="h-3 w-3 mr-1" />
-                Emergency Response
-              </Badge>
-              <Badge variant="outline" className="text-sm">
-                <Satellite className="h-3 w-3 mr-1" />
-                Scientific Research
-              </Badge>
-              <Badge variant="outline" className="text-sm">
-                <Globe className="h-3 w-3 mr-1" />
-                Education & Outreach
-              </Badge>
+            <div className="flex flex-wrap justify-center gap-4">
+              {Array.from(new Set(examples.map(e => e.useCase))).map(useCase => {
+                const example = examples.find(e => e.useCase === useCase)!
+                const IconComponent = example.icon
+                return (
+                  <Badge key={useCase} variant="outline" className="text-sm">
+                    <IconComponent className="h-3 w-3 mr-1" />
+                    {useCase}
+                  </Badge>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -205,51 +301,38 @@ export default function ExamplesPage() {
                       </div>
 
                       <Button asChild>
-                        <Link href={example.embedUrl} target="_blank">
+                        <Link href={example.url} target="_blank">
                           <ExternalLink className="h-4 w-4 mr-2" />
-                          Explore Full Version
+                          Explore Interactive Tool
                         </Link>
                       </Button>
                     </div>
 
-                    {/* Screenshot/Video Preview */}
+                    {/* Media Preview */}
                     <div className={`${isReverse ? 'lg:col-start-1' : ''}`}>
                       <Card className={`overflow-hidden ${useCaseColors[example.useCase]}`}>
                         <CardHeader className="pb-4">
                           <div className="flex items-center justify-between">
-                            <CardTitle className="text-lg">Live Example</CardTitle>
+                            <CardTitle className="text-lg">Live Preview</CardTitle>
                             <Button variant="ghost" size="sm" asChild>
-                              <Link href={example.embedUrl} target="_blank">
+                              <Link href={example.url} target="_blank">
                                 <ExternalLink className="h-4 w-4" />
                               </Link>
                             </Button>
                           </div>
                         </CardHeader>
                         <CardContent className="p-0">
-                          <Link href={example.embedUrl} target="_blank" className="block">
-                            <div className="relative group cursor-pointer">
-                              <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 rounded-t-lg overflow-hidden relative">
-                                {/* Placeholder for screenshot - you can replace with actual screenshots */}
-                                <div className="w-full h-full flex items-center justify-center bg-white">
-                                  <div className="text-center space-y-4">
-                                    <IconComponent className={`h-16 w-16 text-${example.color}-400 mx-auto`} />
-                                    <div>
-                                      <p className="text-lg font-semibold text-slate-700">Interactive Tool</p>
-                                      <p className="text-sm text-slate-500">Click to explore live version</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Hover overlay */}
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-200 flex items-center justify-center">
-                                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-3">
-                                      <ExternalLink className="h-6 w-6 text-slate-700" />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </Link>
+                          <MediaPreview example={example} />
+                          
+                          {/* Action button */}
+                          <div className="p-4 bg-slate-50 border-t">
+                            <Button variant="outline" size="sm" asChild className="w-full">
+                              <Link href={example.url} target="_blank">
+                                <ExternalLink className="h-4 w-4 mr-2" />
+                                Explore Interactive Tool
+                              </Link>
+                            </Button>
+                          </div>
                         </CardContent>
                       </Card>
                     </div>
@@ -284,8 +367,6 @@ export default function ExamplesPage() {
             </div>
           </div>
         </section>
-
-        {/* Footer placeholder - you can add your existing footer here */}
       </div>
     </div>
   )

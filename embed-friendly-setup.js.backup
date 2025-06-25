@@ -1,0 +1,19 @@
+// Example: Add query parameter support to bypass frame restrictions
+// Add this to your target websites
+
+// In your site's header or middleware:
+const urlParams = new URLSearchParams(window.location.search);
+const isEmbedded = urlParams.get('embedded') === 'true';
+
+if (isEmbedded) {
+  // Remove frame-blocking headers
+  // Add specific CSS for embedded view
+  document.body.classList.add('embedded-view');
+  
+  // Hide navigation, footer, etc. for cleaner embed
+  const elementsToHide = ['nav', 'footer', '.site-header'];
+  elementsToHide.forEach(selector => {
+    const element = document.querySelector(selector);
+    if (element) element.style.display = 'none';
+  });
+}
