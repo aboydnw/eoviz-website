@@ -109,11 +109,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Three Ways to Solve Your Challenge
+              Open tools for sharing Earth science that matters
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Whether you're crafting stories, building tools, or organizing data, 
-              we've built components that work together or stand alone.
+              Each tool emerged from conversations with researchers, emergency managers, and policy makers who needed better ways to share critical Earth science insights.
             </p>
           </div>
 
@@ -150,23 +149,23 @@ export default function HomePage() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <Code className="h-8 w-8 text-green-600" />
-                  <Badge variant="outline">Tools</Badge>
+                  <Badge variant="outline">Components</Badge>
                 </div>
-                <CardTitle>eoTools</CardTitle>
+                <CardTitle>eoComponents</CardTitle>
                 <CardDescription>
-                  Get custom visualization tools faster and cheaper than building from scratch
+                  Building blocks for developers who want to create their own Earth science tools
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• Custom tools for your specific data and workflows</li>
-                  <li>• Faster development using proven components</li>
-                  <li>• Alternative to expensive GIS team buildouts</li>
-                  <li>• Move beyond Google Earth Engine limitations</li>
+                  <li>• React components for maps, timelines, and visualizations</li>
+                  <li>• Skip the boilerplate and focus on your unique requirements</li>
+                  <li>• STAC/COG integration helpers included</li>
+                  <li>• Perfect foundation for custom development</li>
                 </ul>
                 <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
-                  <Link href="/products/eotools">
-                    See example tools <ArrowRight className="h-4 w-4 ml-1" />
+                  <Link href="/products/eocomponents">
+                    Explore component library <ArrowRight className="h-4 w-4 ml-1" />
                   </Link>
                 </Button>
               </CardContent>
@@ -198,6 +197,113 @@ export default function HomePage() {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Tools Ecosystem Community Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Growing Community of Earth Science Tools
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Organizations worldwide are building Earth science communication tools using eoViz principles. 
+              Explore what's possible when open data standards meet great design.
+            </p>
+          </div>
+
+          {/* Horizontal scrolling showcase */}
+          <div className="mb-8">
+            <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
+              {/* Tool Preview 1 */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border p-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-blue-600 text-lg">🗺️</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm">Climate Mapper</h3>
+                    <p className="text-xs text-muted-foreground">Climate Research Institute</p>
+                  </div>
+                  <Badge variant="outline" size="sm" className="ml-auto">Simple</Badge>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Interactive climate data visualization with time-series analysis
+                </p>
+                <div className="flex gap-1">
+                  <Badge variant="secondary" size="sm" className="text-xs">STAC</Badge>
+                  <Badge variant="secondary" size="sm" className="text-xs">Embeddable</Badge>
+                </div>
+              </div>
+
+              {/* Tool Preview 2 */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border p-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                    <span className="text-green-600 text-lg">🔥</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm">Wildfire Analytics</h3>
+                    <p className="text-xs text-muted-foreground">Emergency Response Labs</p>
+                  </div>
+                  <div className="ml-auto text-right">
+                    <Badge variant="outline" size="sm">Advanced</Badge>
+                    <div className="mt-1">
+                      <Badge variant="outline" size="sm" className="text-xs bg-green-50">Built with eoComponents</Badge>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Real-time wildfire risk assessment and impact modeling
+                </p>
+                <div className="flex gap-1">
+                  <Badge variant="secondary" size="sm" className="text-xs">Real-time</Badge>
+                  <Badge variant="secondary" size="sm" className="text-xs">API</Badge>
+                </div>
+              </div>
+
+              {/* Tool Preview 3 */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border p-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <span className="text-purple-600 text-lg">🌊</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm">Ocean Data Explorer</h3>
+                    <p className="text-xs text-muted-foreground">Marine Science Consortium</p>
+                  </div>
+                  <Badge variant="outline" size="sm" className="ml-auto">Intermediate</Badge>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Comprehensive ocean data analysis with 3D visualization
+                </p>
+                <div className="flex gap-1">
+                  <Badge variant="secondary" size="sm" className="text-xs">COG</Badge>
+                  <Badge variant="secondary" size="sm" className="text-xs">3D Viz</Badge>
+                </div>
+              </div>
+
+              {/* More tools indicator */}
+              <div className="flex-shrink-0 w-80 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-dashed p-4 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <span className="text-gray-500 text-lg">+</span>
+                  </div>
+                  <p className="text-sm font-medium text-gray-600 mb-1">Many more tools</p>
+                  <p className="text-xs text-gray-500">Browse the full ecosystem</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/tools-ecosystem">
+                Explore Community Tools <ArrowRight className="h-4 w-4 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -301,6 +407,61 @@ export default function HomePage() {
         </div>
       </section>
 
-    </PageLayout>
+      {/* Footer */}
+      <footer className="border-t bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <img 
+                  src="/logos/eoviz-logo.png" 
+                  alt="eoViz" 
+                  className="h-6 w-auto" 
+                />
+                <span className="font-bold">eoViz</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Modular geospatial storytelling platform for Earth observation data.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-3">Products</h3>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/products" className="hover:underline">eoStories</Link></li>
+                <li><Link href="/products" className="hover:underline">eoComponents</Link></li>
+                <li><Link href="/products" className="hover:underline">eoCatalogs</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-3">Resources</h3>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/docs" className="hover:underline">Documentation</Link></li>
+                <li><Link href="/examples" className="hover:underline">Examples</Link></li>
+                <li><Link href="/workshop" className="hover:underline">Workshop</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-3">Community</h3>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/tools-ecosystem" className="hover:underline">Tools Ecosystem</Link></li>
+                <li><Link href="#" className="hover:underline">GitHub</Link></li>
+                <li><Link href="#" className="hover:underline">Contact</Link></li>
+              </ul>
+            </div>
+          </div>
+          <Separator className="my-8" />
+          <div className="text-center text-sm text-muted-foreground space-y-2">
+            <div>
+              © 2025 eoViz. Open source tools for Earth observation storytelling.
+            </div>
+            <div>
+              Built with support from NASA IMPACT and the Earth Science Data Systems Program. 
+              Part of the global effort to make Earth science data more accessible and actionable.
+            </div>
+          </div>
+        </div>
+      </footer>
+      </div>
+    </div>
   )
 }

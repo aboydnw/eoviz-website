@@ -26,24 +26,23 @@ export function Footer() {
             <h3 className="font-semibold mb-3">Products</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/products" className="hover:underline">eoStories</Link></li>
-              <li><Link href="/products" className="hover:underline">eoTools</Link></li>
+              <li><Link href="/products" className="hover:underline">eoComponents</Link></li>
               <li><Link href="/products" className="hover:underline">eoCatalogs</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold mb-3">Community</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/tools-ecosystem" className="hover:underline">Tools Ecosystem</Link></li>
+              <li><Link href="#" className="hover:underline">GitHub</Link></li>
+              <li><Link href="#" className="hover:underline">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-3">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/docs" className="hover:underline">Documentation</Link></li>
-              <li><Link href="/sandbox" className="hover:underline">Sandbox</Link></li>
               <li><Link href="/workshop" className="hover:underline">Workshop</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-3">Community</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="#" className="hover:underline">GitHub</Link></li>
-              <li><Link href="#" className="hover:underline">Contact</Link></li>
-              <li><Link href="#" className="hover:underline">Support</Link></li>
             </ul>
           </div>
         </div>

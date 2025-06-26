@@ -61,6 +61,7 @@ export function ScrollAwareNavigation() {
         </div>
         <div className="flex items-center space-x-6 text-sm font-medium">
           <Link href="/products" className="hover:text-foreground/80">Products</Link>
+          <Link href="/tools-ecosystem" className="hover:text-foreground/80">Tools Ecosystem</Link>
           <Link href="/docs" className="hover:text-foreground/80">Documentation</Link>
           <Link href="/examples" className="hover:text-foreground/80">Examples</Link>
           <Link href="/workshop" className="hover:text-foreground/80">Workshop</Link>
@@ -73,7 +74,7 @@ export function ScrollAwareNavigation() {
             </Link>
           </Button>
           <Button size="sm" asChild>
-            <Link href="/examples">Explore Examples</Link>
+            <Link href="/tools-ecosystem">Explore Tools</Link>
           </Button>
         </div>
       </div>
