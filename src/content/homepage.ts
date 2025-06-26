@@ -215,6 +215,34 @@ export const homepage = {
       text: "Explore Examples First",
       href: "/sandbox"
     }
+=======
+  cta: {
+    badge: "Ready to Get Started?",
+    headline: "Let's help your research reach the people who need it",
+    description: "Whether you're ready to dive in or want to learn more about how other research organizations are solving these challenges, we're here to help.",
+    primaryActions: [
+      {
+        text: "Schedule Discovery Call",
+        href: "#contact",
+        variant: "default"
+      },
+      {
+        text: "Take Our Assessment", 
+        href: "#assessment",
+        variant: "outline"
+      }
+    ],
+    secondaryActions: [
+      {
+        text: "Explore on GitHub",
+        href: "https://github.com",
+        icon: "Github"
+      },
+      {
+        text: "Learn More About Our Approach",
+        href: "/products"
+      }
+    ]
   }
 }
 
