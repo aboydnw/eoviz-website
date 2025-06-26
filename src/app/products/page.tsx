@@ -64,12 +64,12 @@ export default function ProductsPage() {
               Modular Architecture
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Three approaches to 
-              <span className="text-blue-600"> connecting science with people</span>
+              Open source tools for 
+              <span className="text-blue-600"> research organizations</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Whether you need to tell a compelling story, build an interactive tool, or organize 
-              complex datasets, we've created components that solve real communication challenges.
+              Turn your geospatial data into compelling stories, custom visualization tools, 
+              and organized data platforms. Self-hosted, so your data stays under your control.
             </p>
           </div>
         </div>
@@ -373,11 +373,11 @@ export default function ProductsPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to make an impact?
+            Start sharing your research impact
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Explore our examples, dive into the documentation, or reach out to discuss 
-            how eoViz can help your organization share Earth science more effectively.
+            Join research organizations using eoViz to turn complex geospatial data 
+            into clear, compelling communications that drive real-world action.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>

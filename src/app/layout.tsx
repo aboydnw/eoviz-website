@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GlobalErrorHandler } from '@/components/shared/GlobalErrorHandler'
+// import { WebVitals } from '@/components/shared/WebVitals'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,6 +52,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GlobalErrorHandler />
+        {/* <WebVitals /> */}
         {children}
       </body>
     </html>

@@ -16,7 +16,6 @@ export function ProductSuiteSection() {
             Each tool emerged from conversations with researchers, emergency managers, and policy makers who needed better ways to share critical Earth science insights.
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           {/* eoStories */}
           <Card className="relative group hover:shadow-lg transition-shadow">
@@ -99,7 +98,6 @@ export function ProductSuiteSection() {
             </CardContent>
           </Card>
         </div>
-
         {/* Tools Ecosystem Community Section */}
         <div className="mt-20 pt-16 border-t">
           <div className="text-center mb-12">

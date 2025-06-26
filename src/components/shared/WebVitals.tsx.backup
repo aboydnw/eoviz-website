@@ -1,0 +1,32 @@
+'use client'
+
+import { useEffect } from 'react'
+import { getCLS, getFID, getFCP, getLCP, getTTFB, Metric } from 'web-vitals'
+
+function sendToAnalytics(metric: Metric) {
+  // In production, send to your analytics service
+  if (process.env.NODE_ENV === 'production') {
+    console.log('Web Vital:', metric)
+    // TODO: Send to analytics service
+    // analytics.track('web-vital', {
+    //   name: metric.name,
+    //   value: metric.value,
+    //   id: metric.id,
+    //   delta: metric.delta
+    // })
+  } else {
+    console.log('Web Vital:', metric.name, metric.value)
+  }
+}
+
+export function WebVitals() {
+  useEffect(() => {
+    getCLS(sendToAnalytics)
+    getFID(sendToAnalytics)
+    getFCP(sendToAnalytics)
+    getLCP(sendToAnalytics)
+    getTTFB(sendToAnalytics)
+  }, [])
+
+  return null
+}
