@@ -202,6 +202,20 @@ export const homepage = {
     ]
   },
 
+  // Simplified final CTA - focus on the two most effective paths
+  cta: {
+    badge: "Ready to Get Started?",
+    headline: "Let's help your research reach the people who need it",
+    description: "See how eoViz works with your data, or talk with our team about your specific challenges.",
+    primaryAction: {
+      text: "Schedule Discovery Call",
+      href: "#contact"
+    },
+    secondaryAction: {
+      text: "Explore Examples First",
+      href: "/sandbox"
+    }
+=======
   cta: {
     badge: "Ready to Get Started?",
     headline: "Let's help your research reach the people who need it",
