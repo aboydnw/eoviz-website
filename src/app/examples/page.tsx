@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { ScrollAwareNavigation } from '@/components/layout/ScrollAwareNavigation'
+import { PageLayout } from '@/components/layout/shared'
 import { OptimizedImage } from '@/components/shared/OptimizedImage'
 import { 
   ExternalLink, 
@@ -192,10 +192,7 @@ function MediaPreview({ example }: { example: Example }) {
 
 export default function ExamplesPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <ScrollAwareNavigation />
-      
-      <div className="pt-16">
+    <PageLayout>
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -367,7 +364,6 @@ export default function ExamplesPage() {
             </div>
           </div>
         </section>
-      </div>
-    </div>
+    </PageLayout>
   )
 }
