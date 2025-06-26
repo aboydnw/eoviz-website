@@ -38,8 +38,8 @@ export default function ProductsPage() {
           </div>
           <div className="flex items-center space-x-6 text-sm font-medium">
             <Link href="/products" className="text-foreground">Products</Link>
+            <Link href="/tools-ecosystem" className="hover:text-foreground/80">Tools Ecosystem</Link>
             <Link href="/docs" className="hover:text-foreground/80">Documentation</Link>
-            <Link href="/sandbox" className="hover:text-foreground/80">Sandbox</Link>
             <Link href="/workshop" className="hover:text-foreground/80">Workshop</Link>
           </div>
           <div className="ml-auto flex items-center space-x-4">
@@ -50,7 +50,7 @@ export default function ProductsPage() {
               </Link>
             </Button>
             <Button size="sm" asChild>
-              <Link href="/sandbox">Try Demo</Link>
+              <Link href="/tools-ecosystem">Explore Tools</Link>
             </Button>
           </div>
         </div>
@@ -142,16 +142,16 @@ export default function ProductsPage() {
               </CardContent>
             </Card>
 
-            {/* eoTools */}
+            {/* eoComponents */}
             <Card className="relative group hover:shadow-xl transition-all duration-300 border-2">
               <CardHeader className="text-center pb-4">
                 <div className="mx-auto mb-4 p-3 bg-green-100 rounded-full w-fit">
                   <Code className="h-8 w-8 text-green-600" />
                 </div>
-                <Badge variant="outline" className="w-fit mx-auto mb-2">Tools</Badge>
-                <CardTitle className="text-2xl">eoTools</CardTitle>
+                <Badge variant="outline" className="w-fit mx-auto mb-2">Components</Badge>
+                <CardTitle className="text-2xl">eoComponents</CardTitle>
                 <CardDescription className="text-base">
-                  Get custom visualization tools faster and cheaper than building from scratch
+                  Building blocks for developers who want to create their own Earth science tools
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -172,15 +172,15 @@ export default function ProductsPage() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Organizations with custom datasets</span>
+                      <span>Developers building custom Earth science tools</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Teams outgrowing Google Earth Engine</span>
+                      <span>Organizations with in-house development teams</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Alternative to expensive GIS buildouts</span>
+                      <span>Teams who need more flexibility than off-the-shelf tools</span>
                     </li>
                   </ul>
                 </div>
@@ -188,19 +188,26 @@ export default function ProductsPage() {
                 <div>
                   <h4 className="font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2 text-sm">
-                    <li>• Custom tools for your specific data and workflows</li>
-                    <li>• Faster development using proven components</li>
-                    <li>• Reliable user experience and performance</li>
-                    <li>• Cost-effective alternative to custom builds</li>
-                    <li>• Built on open source foundations</li>
+                    <li>• React components for maps, timelines, data filters</li>
+                    <li>• STAC/COG integration helpers included</li>
+                    <li>• Design system with consistent UI patterns</li>
+                    <li>• Skip the boilerplate and focus on unique requirements</li>
+                    <li>• Documentation and examples included</li>
                   </ul>
                 </div>
 
-                <Button className="w-full group-hover:bg-green-700 transition-colors" asChild>
-                  <Link href="/products/eotools">
-                    See Example Tools <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
-                </Button>
+                <div className="space-y-2">
+                  <Button className="w-full group-hover:bg-green-700 transition-colors" asChild>
+                    <Link href="/products/eocomponents">
+                      View Component Library <ArrowRight className="h-4 w-4 ml-2" />
+                    </Link>
+                  </Button>
+                  <Button variant="outline" className="w-full" asChild>
+                    <Link href="/tools-ecosystem">
+                      See Components in Action
+                    </Link>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
 
@@ -338,7 +345,7 @@ export default function ProductsPage() {
                         eoStories
                       </div>
                       <div className="bg-green-200 h-16 rounded flex items-center justify-center text-xs font-medium">
-                        eoTools
+                        eoComponents
                       </div>
                       <div className="bg-purple-200 h-16 rounded flex items-center justify-center text-xs font-medium">
                         eoCatalogs
@@ -374,13 +381,13 @@ export default function ProductsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link href="/workshop">
-                Join Our Workshop
+              <Link href="/examples">
+                Explore Examples
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/sandbox">
-                Explore Examples
+              <Link href="/tools-ecosystem">
+                Explore Tools
               </Link>
             </Button>
           </div>
@@ -408,7 +415,7 @@ export default function ProductsPage() {
               <h3 className="font-semibold mb-3">Products</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/products" className="hover:underline">eoStories</Link></li>
-                <li><Link href="/products" className="hover:underline">eoTools</Link></li>
+                <li><Link href="/products" className="hover:underline">eoComponents</Link></li>
                 <li><Link href="/products" className="hover:underline">eoCatalogs</Link></li>
               </ul>
             </div>
@@ -416,16 +423,15 @@ export default function ProductsPage() {
               <h3 className="font-semibold mb-3">Resources</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/docs" className="hover:underline">Documentation</Link></li>
-                <li><Link href="/sandbox" className="hover:underline">Sandbox</Link></li>
                 <li><Link href="/workshop" className="hover:underline">Workshop</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-3">Community</h3>
               <ul className="space-y-2 text-sm">
+                <li><Link href="/tools-ecosystem" className="hover:underline">Tools Ecosystem</Link></li>
                 <li><Link href="#" className="hover:underline">GitHub</Link></li>
                 <li><Link href="#" className="hover:underline">Contact</Link></li>
-                <li><Link href="#" className="hover:underline">Support</Link></li>
               </ul>
             </div>
           </div>

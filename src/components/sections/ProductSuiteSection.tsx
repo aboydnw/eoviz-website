@@ -10,35 +10,12 @@ export function ProductSuiteSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Here's how we help you turn complex data into clear impact
+            Open tools for sharing Earth science that matters
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Whether you need compelling stories, custom visualization tools, or organized data platforms, 
-            we've created a simple path to get your research the attention it deserves.
+            Each tool emerged from conversations with researchers, emergency managers, and policy makers who needed better ways to share critical Earth science insights.
           </p>
         </div>
-
-        {/* 3-Step Plan */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-xl font-semibold mb-2">Choose Your Approach</h3>
-              <p className="text-muted-foreground">Tell us about your data and communication goals. We'll help you determine whether you need stories, tools, catalogs, or a combination.</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-xl font-semibold mb-2">Implement Together</h3>
-              <p className="text-muted-foreground">Work with our team to build your solution, or use our open-source tools independently. Your data stays under your control.</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-xl font-semibold mb-2">Watch Impact Grow</h3>
-              <p className="text-muted-foreground">Stakeholders understand your work, scientists save time, and your research gets the recognition and funding it deserves.</p>
-            </div>
-          </div>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           {/* eoStories */}
           <Card className="relative group hover:shadow-lg transition-shadow">
@@ -72,23 +49,23 @@ export function ProductSuiteSection() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <Code className="h-8 w-8 text-green-600" />
-                <Badge variant="outline">Tools</Badge>
+                <Badge variant="outline">Components</Badge>
               </div>
-              <CardTitle>eoTools</CardTitle>
+              <CardTitle>eoComponents</CardTitle>
               <CardDescription>
-                Get custom visualization tools that show your unique data exactly how stakeholders need to see it
+                Building blocks for developers who want to create custom Earth science tools
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-sm">
-                <li>• Your data gets the specialized interface it deserves</li>
-                <li>• Skip expensive GIS team buildouts</li>
-                <li>• Move beyond Google Earth Engine limitations</li>
-                <li>• Stakeholders interact with data, not just view it</li>
+                <li>• React components for maps, timelines, and visualizations</li>
+                <li>• Skip the boilerplate and focus on your unique requirements</li>
+                <li>• STAC/COG integration helpers included</li>
+                <li>• Perfect foundation for custom development</li>
               </ul>
               <Button variant="ghost" className="mt-4 p-0 h-auto group-hover:translate-x-1 transition-transform" asChild>
-                <Link href="/products/eotools">
-                  See example tools <ArrowRight className="h-4 w-4 ml-1" />
+                <Link href="/products/eocomponents">
+                  Explore component library <ArrowRight className="h-4 w-4 ml-1" />
                 </Link>
               </Button>
             </CardContent>
@@ -120,6 +97,110 @@ export function ProductSuiteSection() {
               </Button>
             </CardContent>
           </Card>
+        </div>
+        {/* Tools Ecosystem Community Section */}
+        <div className="mt-20 pt-16 border-t">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Growing Community of Earth Science Tools
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Organizations worldwide are building Earth science communication tools using eoViz principles. 
+              Explore what's possible when open data standards meet great design.
+            </p>
+          </div>
+
+          {/* Horizontal scrolling showcase */}
+          <div className="mb-8">
+            <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
+              {/* Tool Preview 1 */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border p-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-blue-600 text-lg">🗺️</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm">Climate Mapper</h3>
+                    <p className="text-xs text-muted-foreground">Climate Research Institute</p>
+                  </div>
+                  <Badge variant="outline" size="sm" className="ml-auto">Simple</Badge>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Interactive climate data visualization with time-series analysis
+                </p>
+                <div className="flex gap-1">
+                  <Badge variant="secondary" size="sm" className="text-xs">STAC</Badge>
+                  <Badge variant="secondary" size="sm" className="text-xs">Embeddable</Badge>
+                </div>
+              </div>
+
+              {/* Tool Preview 2 */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border p-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                    <span className="text-green-600 text-lg">🔥</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm">Wildfire Analytics</h3>
+                    <p className="text-xs text-muted-foreground">Emergency Response Labs</p>
+                  </div>
+                  <div className="ml-auto text-right">
+                    <Badge variant="outline" size="sm">Advanced</Badge>
+                    <div className="mt-1">
+                      <Badge variant="outline" size="sm" className="text-xs bg-green-50">Built with eoComponents</Badge>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Real-time wildfire risk assessment and impact modeling
+                </p>
+                <div className="flex gap-1">
+                  <Badge variant="secondary" size="sm" className="text-xs">Real-time</Badge>
+                  <Badge variant="secondary" size="sm" className="text-xs">API</Badge>
+                </div>
+              </div>
+
+              {/* Tool Preview 3 */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border p-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <span className="text-purple-600 text-lg">🌊</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm">Ocean Data Explorer</h3>
+                    <p className="text-xs text-muted-foreground">Marine Science Consortium</p>
+                  </div>
+                  <Badge variant="outline" size="sm" className="ml-auto">Intermediate</Badge>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">
+                  Comprehensive ocean data analysis with 3D visualization
+                </p>
+                <div className="flex gap-1">
+                  <Badge variant="secondary" size="sm" className="text-xs">COG</Badge>
+                  <Badge variant="secondary" size="sm" className="text-xs">3D Viz</Badge>
+                </div>
+              </div>
+
+              {/* More tools indicator */}
+              <div className="flex-shrink-0 w-80 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-dashed p-4 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <span className="text-gray-500 text-lg">+</span>
+                  </div>
+                  <p className="text-sm font-medium text-gray-600 mb-1">Many more tools</p>
+                  <p className="text-xs text-gray-500">Browse the full ecosystem</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/tools-ecosystem">
+                Explore Community Tools <ArrowRight className="h-4 w-4 ml-2" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
