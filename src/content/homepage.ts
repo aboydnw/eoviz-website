@@ -1,4 +1,4 @@
-// Simplified homepage content focused on stakeholder buy-in
+// Homepage content - easy to update without touching components
 export const homepage = {
   hero: {
     badge: "Open Source • Community-Driven • Mission-Focused",
@@ -7,11 +7,13 @@ export const homepage = {
     description: "Your Earth observation data could drive critical decisions, secure funding, and solve real-world problems. But complex datasets, technical barriers, and communication gaps keep your research from reaching the people who need it most.",
     primaryCta: {
       text: "Explore Examples",
-      href: "/sandbox"
+      href: "/sandbox",
+      icon: "Play"
     },
     secondaryCta: {
-      text: "Schedule Discovery Call", 
-      href: "#contact"
+      text: "Learn How", 
+      href: "/docs",
+      icon: "BookOpen"
     },
     video: {
       src: "/videos/demo-stories.mp4",
@@ -35,5 +37,3 @@ export const homepage = {
     }
   }
 }
-
-// Keep the rest of your content structure for other sections...
