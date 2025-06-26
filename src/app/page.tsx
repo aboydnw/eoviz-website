@@ -208,10 +208,41 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Growing Community of Earth Science Tools
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Organizations worldwide are building Earth science communication tools using eoViz principles. 
-              Explore what's possible when open data standards meet great design.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+              Research organizations worldwide are building Earth science communication tools using eoViz principles. 
+              These tools work together, share data standards, and accelerate scientific impact.
             </p>
+            
+            {/* Value Props Grid */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Zap className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-sm mb-2">Faster Development</h3>
+                <p className="text-xs text-muted-foreground">
+                  Start with proven tools and components instead of building from scratch
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Users className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-sm mb-2">Shared Standards</h3>
+                <p className="text-xs text-muted-foreground">
+                  Tools work together using open data formats and integration patterns
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Globe className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-sm mb-2">Bigger Impact</h3>
+                <p className="text-xs text-muted-foreground">
+                  Connect your tools to a network that amplifies scientific communication
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Horizontal scrolling showcase */}
@@ -299,11 +330,18 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Button variant="outline" size="lg" asChild>
-              <Link href="/tools-ecosystem">
-                Explore Community Tools <ArrowRight className="h-4 w-4 ml-2" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="outline" size="lg" asChild>
+                <Link href="/tools-ecosystem">
+                  Explore Community Tools <ArrowRight className="h-4 w-4 ml-2" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="lg" asChild>
+                <Link href="/products/eocomponents">
+                  Build Your Own Tool
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
