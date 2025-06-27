@@ -7,7 +7,6 @@ import {
   ExternalLink,
   Github,
   Globe,
-  CheckCircle,
   ArrowRight,
   Flame,
   Satellite,
