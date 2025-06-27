@@ -18,7 +18,6 @@ import {
   Shield,
   Users,
   Settings,
-  Map,
   BarChart3,
   Cloud
 } from 'lucide-react'
