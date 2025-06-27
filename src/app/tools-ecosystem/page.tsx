@@ -9,7 +9,6 @@ import {
   ExternalLink,
   Github,
   Globe,
-  Zap,
   Users,
   CheckCircle,
   Code,
@@ -17,7 +16,6 @@ import {
   Map,
   BarChart3,
   ArrowRight,
-  Plus,
   Flame,
   Satellite,
   Activity,
@@ -27,7 +25,6 @@ import {
   Shield,
   BookOpen,
   Download,
-  Award,
   Layers
 } from 'lucide-react'
 
@@ -78,7 +75,7 @@ export default function ToolsEcosystemPage() {
                 <p className="text-sm text-muted-foreground">NASA, USGS, and NOAA provide institutional trust and scientific accuracy</p>
               </div>
               <div>
-                <Zap className="h-8 w-8 mx-auto text-green-600 mb-3" />
+                <Cloud className="h-8 w-8 mx-auto text-green-600 mb-3" />
                 <h4 className="font-semibold mb-2">Expert Development Examples</h4>
                 <p className="text-sm text-muted-foreground">See how professional teams build tools using modern development practices</p>
               </div>

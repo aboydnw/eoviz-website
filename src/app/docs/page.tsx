@@ -14,7 +14,6 @@ import {
   ExternalLink,
   Github,
   FileText,
-  Zap,
   Shield,
   Users,
   Settings,
@@ -248,7 +247,7 @@ export default function DocsPage() {
             <Card className="hover:shadow-md transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-orange-600" />
+                <Cloud className="h-6 w-6 text-orange-600" />
                 </div>
                 <CardTitle className="text-lg">eoAPI Integration</CardTitle>
                 <CardDescription>

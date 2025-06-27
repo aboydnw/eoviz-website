@@ -10,7 +10,6 @@ import {
   BookOpen,
   ArrowRight,
   CheckCircle,
-  Zap,
   Palette,
   Database
 } from 'lucide-react'
