@@ -12,8 +12,7 @@ import {
   Clock,
   Target,
   Building,
-  Database,
-  Github
+  Database
 } from 'lucide-react'
 
 export default function EoToolsPage() {
