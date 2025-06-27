@@ -6,7 +6,7 @@ Marketing site for eoViz - a modular geospatial storytelling platform for resear
 
 eoViz helps research organizations turn complex geospatial data into:
 - **eoStories**: Compelling narratives that stakeholders understand
-- **eoTools**: Custom visualization tools for unique datasets  
+- **eoComponents**: Build custom tools quicker with some reliable geospatial components
 - **eoCatalogs**: Organized data platforms for discoverability
 
 **Target audience**: Research organizations with their own geospatial data who need better ways to communicate findings to stakeholders, funders, and decision-makers.
