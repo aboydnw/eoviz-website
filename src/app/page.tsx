@@ -257,9 +257,9 @@ export default function HomePage() {
                     <p className="text-xs text-muted-foreground">Development Seed</p>
                   </div>
                   <div className="ml-auto text-right">
-                    <Badge variant="outline" size="sm">Intermediate</Badge>
+                    <Badge variant="outline">Intermediate</Badge>
                     <div className="mt-1">
-                      <Badge variant="outline" size="sm" className="text-xs bg-green-50">Built with eoComponents</Badge>
+                      <Badge variant="outline" className="text-xs bg-green-50">Built with eoComponents</Badge>
                     </div>
                   </div>
                 </div>
@@ -267,8 +267,8 @@ export default function HomePage() {
                   Wildfire perimeter tracking and burn severity analysis for emergency management
                 </p>
                 <div className="flex gap-1">
-                  <Badge variant="secondary" size="sm" className="text-xs">STAC</Badge>
-                  <Badge variant="secondary" size="sm" className="text-xs">Real-time</Badge>
+                  <Badge variant="secondary" className="text-xs">STAC</Badge>
+                  <Badge variant="secondary" className="text-xs">Real-time</Badge>
                 </div>
               </div>
 
@@ -282,14 +282,14 @@ export default function HomePage() {
                     <h3 className="font-semibold text-sm">NASA Worldview</h3>
                     <p className="text-xs text-muted-foreground">NASA GIBS</p>
                   </div>
-                  <Badge variant="outline" size="sm" className="ml-auto">Simple</Badge>
+                  <Badge variant="outline" className="ml-auto">Simple</Badge>
                 </div>
                 <p className="text-xs text-muted-foreground mb-3">
                   Browse 1,200+ global satellite imagery layers with near real-time data
                 </p>
                 <div className="flex gap-1">
-                  <Badge variant="secondary" size="sm" className="text-xs">Global</Badge>
-                  <Badge variant="secondary" size="sm" className="text-xs">NASA</Badge>
+                  <Badge variant="secondary" className="text-xs">Global</Badge>
+                  <Badge variant="secondary" className="text-xs">NASA</Badge>
                 </div>
               </div>
 
@@ -303,14 +303,14 @@ export default function HomePage() {
                     <h3 className="font-semibold text-sm">Real-time Earthquakes</h3>
                     <p className="text-xs text-muted-foreground">USGS</p>
                   </div>
-                  <Badge variant="outline" size="sm" className="ml-auto">Simple</Badge>
+                  <Badge variant="outline" className="ml-auto">Simple</Badge>
                 </div>
                 <p className="text-xs text-muted-foreground mb-3">
                   Global earthquake monitoring with magnitude and location data
                 </p>
                 <div className="flex gap-1">
-                  <Badge variant="secondary" size="sm" className="text-xs">Real-time</Badge>
-                  <Badge variant="secondary" size="sm" className="text-xs">USGS</Badge>
+                  <Badge variant="secondary" className="text-xs">Real-time</Badge>
+                  <Badge variant="secondary" className="text-xs">USGS</Badge>
                 </div>
               </div>
 

@@ -121,7 +121,7 @@ export default function ToolsEcosystemPage() {
                   <div className="text-right">
                     <Badge variant="secondary" className="text-xs">Intermediate</Badge>
                     <div className="mt-1">
-                      <Badge variant="outline" size="sm" className="text-xs bg-green-50 border-green-200">Built with eoComponents</Badge>
+                      <Badge variant="outline" className="text-xs bg-green-50 border-green-200">Built with eoComponents</Badge>
                     </div>
                   </div>
                 </div>
@@ -133,10 +133,10 @@ export default function ToolsEcosystemPage() {
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">STAC</Badge>
-                  <Badge variant="outline" size="sm">Satellite Data</Badge>
-                  <Badge variant="outline" size="sm">Embeddable</Badge>
-                  <Badge variant="outline" size="sm">Real-time</Badge>
+                  <Badge variant="outline">STAC</Badge>
+                  <Badge variant="outline">Satellite Data</Badge>
+                  <Badge variant="outline">Embeddable</Badge>
+                  <Badge variant="outline">Real-time</Badge>
                 </div>
                 
                 <div className="flex gap-2">
@@ -173,10 +173,10 @@ export default function ToolsEcosystemPage() {
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">MODIS</Badge>
-                  <Badge variant="outline" size="sm">Landsat</Badge>
-                  <Badge variant="outline" size="sm">Near Real-time</Badge>
-                  <Badge variant="outline" size="sm">Global Coverage</Badge>
+                  <Badge variant="outline">MODIS</Badge>
+                  <Badge variant="outline">Landsat</Badge>
+                  <Badge variant="outline">Near Real-time</Badge>
+                  <Badge variant="outline">Global Coverage</Badge>
                 </div>
                 
                 <div className="flex gap-2">
@@ -217,10 +217,10 @@ export default function ToolsEcosystemPage() {
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">Real-time</Badge>
-                  <Badge variant="outline" size="sm">Global</Badge>
-                  <Badge variant="outline" size="sm">ANSS Network</Badge>
-                  <Badge variant="outline" size="sm">Filtering</Badge>
+                  <Badge variant="outline">Real-time</Badge>
+                  <Badge variant="outline">Global</Badge>
+                  <Badge variant="outline">ANSS Network</Badge>
+                  <Badge variant="outline">Filtering</Badge>
                 </div>
                 
                 <div className="flex gap-2">
@@ -261,10 +261,10 @@ export default function ToolsEcosystemPage() {
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">Real-time</Badge>
-                  <Badge variant="outline" size="sm">Water Resources</Badge>
-                  <Badge variant="outline" size="sm">Station Network</Badge>
-                  <Badge variant="outline" size="sm">Mobile-friendly</Badge>
+                  <Badge variant="outline">Real-time</Badge>
+                  <Badge variant="outline">Water Resources</Badge>
+                  <Badge variant="outline">Station Network</Badge>
+                  <Badge variant="outline">Mobile-friendly</Badge>
                 </div>
                 
                 <div className="flex gap-2">
@@ -305,10 +305,10 @@ export default function ToolsEcosystemPage() {
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">MODIS</Badge>
-                  <Badge variant="outline" size="sm">VIIRS</Badge>
-                  <Badge variant="outline" size="sm">Ocean Health</Badge>
-                  <Badge variant="outline" size="sm">Climate Indicators</Badge>
+                  <Badge variant="outline">MODIS</Badge>
+                  <Badge variant="outline">VIIRS</Badge>
+                  <Badge variant="outline">Ocean Health</Badge>
+                  <Badge variant="outline">Climate Indicators</Badge>
                 </div>
                 
                 <div className="flex gap-2">
@@ -349,10 +349,10 @@ export default function ToolsEcosystemPage() {
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">Climate Data</Badge>
-                  <Badge variant="outline" size="sm">Projections</Badge>
-                  <Badge variant="outline" size="sm">County-level</Badge>
-                  <Badge variant="outline" size="sm">Policy Support</Badge>
+                  <Badge variant="outline">Climate Data</Badge>
+                  <Badge variant="outline">Projections</Badge>
+                  <Badge variant="outline">County-level</Badge>
+                  <Badge variant="outline">Policy Support</Badge>
                 </div>
                 
                 <div className="flex gap-2">
