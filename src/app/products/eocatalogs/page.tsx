@@ -4,19 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { PageLayout } from '@/components/layout/shared'
 import { 
-  Layers, 
-  ArrowRight, 
-  CheckCircle, 
   BookOpen,
-  Database,
-  Search,
-  Users,
-  Building,
-  Globe,
-  Palette,
-  Settings,
-  Eye,
-  Filter
+  Eye
 } from 'lucide-react'
 
 export default function eoCatalogsPage() {

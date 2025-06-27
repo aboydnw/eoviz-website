@@ -5,15 +5,6 @@ import { Badge } from '@/components/ui/badge'
 import { PageLayout } from '@/components/layout/shared'
 import { 
   BookOpen, 
-  ArrowRight, 
-  CheckCircle, 
-  ExternalLink,
-  FileText,
-  Share2,
-  Download,
-  Search,
-  Zap,
-  Users,
   Eye
 } from 'lucide-react'
 

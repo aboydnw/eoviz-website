@@ -11,8 +11,7 @@ import {
   Code, 
   BookOpen,
   ArrowRight,
-  Play,
-  ExternalLink
+  Play
 } from 'lucide-react'
 
 export default function HomePage() {

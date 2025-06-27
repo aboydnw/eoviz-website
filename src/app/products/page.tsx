@@ -12,12 +12,7 @@ import {
   CheckCircle,
   Zap,
   Palette,
-  Database,
-  Wrench,
-  Users,
-  Rocket,
-  Github,
-  Download
+  Database
 } from 'lucide-react'
 
 export default function ProductsPage() {
