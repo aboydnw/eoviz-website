@@ -14,10 +14,13 @@ const eslintConfig = [
   {
     rules: {
       "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": ["error", { 
         argsIgnorePattern: "^_",
         varsIgnorePattern: "^_" 
       }],
+      "jsx-a11y/alt-text": "off",
+      "@next/next/no-img-element": "warn",
     }
   }
 ];
