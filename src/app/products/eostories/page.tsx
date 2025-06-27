@@ -1,1 +1,111 @@
-import Link from 'next/link'\nimport { Button } from '@/components/ui/button'\nimport { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'\nimport { Badge } from '@/components/ui/badge'\nimport { PageLayout } from '@/components/layout/shared'\nimport { \n  BookOpen, \n  ArrowRight, \n  CheckCircle, \n  ExternalLink,\n  FileText,\n  Share2,\n  Download,\n  Search,\n  Zap,\n  Users,\n  Eye\n} from 'lucide-react'\n\nexport default function eoStoriesPage() {\n  return (\n    <PageLayout>\n      {/* Hero Section */}\n      <section className=\"py-20 lg:py-32\">\n        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n          <div className=\"max-w-4xl mx-auto text-center\">\n            <Badge variant=\"secondary\" className=\"mb-4\">\n              Narrative-Driven Communication\n            </Badge>\n            <h1 className=\"text-4xl md:text-6xl font-bold tracking-tight mb-6\">\n              eoStories\n              <span className=\"text-blue-600\"> for Earth Science Storytelling</span>\n            </h1>\n            <p className=\"text-xl text-muted-foreground mb-8 max-w-3xl mx-auto\">\n              Transform complex research into narratives that stakeholders actually understand and remember. \n              Combine interactive maps, charts, and compelling narrative to communicate your findings effectively.\n            </p>\n            <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">\n              <Button size=\"lg\" asChild>\n                <Link href=\"/examples\">\n                  <Eye className=\"h-4 w-4 mr-2\" />\n                  See Story Examples\n                </Link>\n              </Button>\n              <Button variant=\"outline\" size=\"lg\" asChild>\n                <Link href=\"#get-started\">\n                  <BookOpen className=\"h-4 w-4 mr-2\" />\n                  Get Started\n                </Link>\n              </Button>\n            </div>\n          </div>\n        </div>\n      </section>\n\n      {/* Demo Video Section */}\n      <section className=\"py-16 bg-muted/50\">\n        <div className=\"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8\">\n          <Card className=\"overflow-hidden\">\n            <CardContent className=\"p-0\">\n              <video \n                autoPlay \n                loop \n                muted \n                playsInline\n                className=\"w-full h-auto\" \n              >\n                <source src=\"/videos/demo-stories.mp4\" type=\"video/mp4\" />\n                Your browser does not support the video tag.\n              </video>\n              <div className=\"p-6 bg-gradient-to-r from-blue-50 to-indigo-50\">\n                <h3 className=\"font-semibold text-lg text-blue-900 mb-2\">Wildfire Risk Communication Story</h3>\n                <p className=\"text-sm text-blue-700\">\n                  See how narrative combined with interactive visualization helps emergency managers \n                  understand and communicate wildfire risk to their communities.\n                </p>\n              </div>\n            </CardContent>\n          </Card>\n        </div>\n      </section>\n\n      {/* Key Features */}\n      <section className=\"py-20\">\n        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n          <div className=\"text-center mb-16\">\n            <h2 className=\"text-3xl md:text-4xl font-bold mb-4\">\n              Everything you need for compelling science communication\n            </h2>\n            <p className=\"text-xl text-muted-foreground max-w-2xl mx-auto\">\n              Built specifically for researchers, science communicators, and organizations \n              who need to translate complex findings into actionable insights.\n            </p>\n          </div>\n          \n          <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\">\n            <Card className=\"group hover:shadow-lg transition-shadow\">\n              <CardHeader>\n                <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4\">\n                  <FileText className=\"h-6 w-6 text-blue-600\" />\n                </div>\n                <CardTitle className=\"text-lg\">Interactive Narratives</CardTitle>\n                <CardDescription>\n                  Combine compelling storytelling with interactive elements that let readers explore your data\n                </CardDescription>\n              </CardHeader>\n              <CardContent>\n                <ul className=\"space-y-2 text-sm\">\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>Scrollable story format with embedded visualizations</span>\n                  </li>\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>Interactive maps and charts within narrative flow</span>\n                  </li>\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>Responsive design for all devices</span>\n                  </li>\n                </ul>\n              </CardContent>\n            </Card>\n\n            <Card className=\"group hover:shadow-lg transition-shadow\">\n              <CardHeader>\n                <div className=\"w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4\">\n                  <Share2 className=\"h-6 w-6 text-green-600\" />\n                </div>\n                <CardTitle className=\"text-lg\">Multi-Platform Publishing</CardTitle>\n                <CardDescription>\n                  Share your stories across web, PDF, and presentation formats from a single source\n                </CardDescription>\n              </CardHeader>\n              <CardContent>\n                <ul className=\"space-y-2 text-sm\">\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>Export to PDF for reports and publications</span>\n                  </li>\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>Presentation mode for conferences and meetings</span>\n                  </li>\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>SEO-optimized web publishing</span>\n                  </li>\n                </ul>\n              </CardContent>\n            </Card>\n\n            <Card className=\"group hover:shadow-lg transition-shadow\">\n              <CardHeader>\n                <div className=\"w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4\">\n                  <Search className=\"h-6 w-6 text-purple-600\" />\n                </div>\n                <CardTitle className=\"text-lg\">Custom Branding</CardTitle>\n                <CardDescription>\n                  Maintain your organization's visual identity while leveraging powerful storytelling tools\n                </CardDescription>\n              </CardHeader>\n              <CardContent>\n                <ul className=\"space-y-2 text-sm\">\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>Custom themes and color schemes</span>\n                  </li>\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>Organization logos and branding elements</span>\n                  </li>\n                  <li className=\"flex items-start space-x-2\">\n                    <CheckCircle className=\"h-4 w-4 text-green-600 mt-0.5 flex-shrink-0\" />\n                    <span>Self-hosted for complete control</span>\n                  </li>\n                </ul>\n              </CardContent>\n            </Card>\n          </div>\n        </div>\n      </section>\n\n      {/* Integration with Ecosystem */}\n      <section className=\"py-16 bg-blue-50\">\n        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n          <div className=\"text-center mb-12\">\n            <h2 className=\"text-3xl font-bold mb-4\">Embed Ecosystem Tools in Your Stories</h2>\n            <p className=\"text-xl text-muted-foreground max-w-2xl mx-auto\">\n              Make your stories interactive by embedding tools from our community ecosystem. \n              Readers can explore data directly within your narrative.\n            </p>\n          </div>\n          \n          <div className=\"grid md:grid-cols-2 gap-8\">\n            <Card>\n              <CardHeader>\n                <CardTitle className=\"flex items-center gap-3\">\n                  <div className=\"w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center\">\n                    <span className=\"text-green-600 text-lg\">🔥</span>\n                  </div>\n                  Wildfire Risk Story + Fire Explorer Tool\n                </CardTitle>\n              </CardHeader>\n              <CardContent>\n                <p className=\"text-muted-foreground mb-4\">\n                  Tell the story of wildfire risk in your region, then let readers explore \n                  historical fire data using embedded visualization tools.\n                </p>\n                <Button variant=\"outline\" size=\"sm\" asChild>\n                  <Link href=\"/tools-ecosystem?filter=wildfire\">\n                    <ExternalLink className=\"h-4 w-4 mr-2\" />\n                    View Fire Tools\n                  </Link>\n                </Button>\n              </CardContent>\n            </Card>\n            \n            <Card>\n              <CardHeader>\n                <CardTitle className=\"flex items-center gap-3\">\n                  <div className=\"w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center\">\n                    <span className=\"text-blue-600 text-lg\">🌡️</span>\n                  </div>\n                  Climate Story + Data Explorer\n                </CardTitle>\n              </CardHeader>\n              <CardContent>\n                <p className=\"text-muted-foreground mb-4\">\n                  Explain climate trends through narrative, then provide interactive \n                  tools for readers to explore the data behind your findings.\n                </p>\n                <Button variant=\"outline\" size=\"sm\" asChild>\n                  <Link href=\"/tools-ecosystem?filter=climate\">\n                    <ExternalLink className=\"h-4 w-4 mr-2\" />\n                    View Climate Tools\n                  </Link>\n                </Button>\n              </CardContent>\n            </Card>\n          </div>\n          \n          <div className=\"text-center mt-8\">\n            <Button asChild>\n              <Link href=\"/tools-ecosystem\">\n                Browse All Community Tools <ArrowRight className=\"h-4 w-4 ml-2\" />\n              </Link>\n            </Button>\n          </div>\n        </div>\n      </section>\n\n      {/* Perfect For Section */}\n      <section className=\"py-20\">\n        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\n          <div className=\"text-center mb-16\">\n            <h2 className=\"text-3xl md:text-4xl font-bold mb-4\">\n              Perfect for research organizations\n            </h2>\n            <p className=\"text-xl text-muted-foreground max-w-2xl mx-auto\">\n              eoStories addresses the specific communication challenges faced by scientists, \n              research institutions, and science-focused organizations.\n            </p>\n          </div>\n          \n          <div className=\"grid md:grid-cols-3 gap-8\">\n            <div className=\"text-center\">\n              <div className=\"w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6\">\n                <Users className=\"h-8 w-8 text-blue-600\" />\n              </div>\n              <h3 className=\"text-xl font-semibold mb-4\">Research Communication Teams</h3>\n              <p className=\"text-muted-foreground mb-6\">\n                Transform technical papers into compelling narratives that engage stakeholders, \n                media, and funding organizations.\n              </p>\n              <ul className=\"text-sm space-y-2\">\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Clear impact demonstration</span>\n                </li>\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Media-ready materials</span>\n                </li>\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Stakeholder engagement</span>\n                </li>\n              </ul>\n            </div>\n            \n            <div className=\"text-center\">\n              <div className=\"w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6\">\n                <FileText className=\"h-8 w-8 text-green-600\" />\n              </div>\n              <h3 className=\"text-xl font-semibold mb-4\">Science Outreach Organizations</h3>\n              <p className=\"text-muted-foreground mb-6\">\n                Create educational content that makes complex Earth science accessible \n                to diverse audiences and educational levels.\n              </p>\n              <ul className=\"text-sm space-y-2\">\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Educational storytelling</span>\n                </li>\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Interactive learning</span>\n                </li>\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Multi-format delivery</span>\n                </li>\n              </ul>\n            </div>\n            \n            <div className=\"text-center\">\n              <div className=\"w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6\">\n                <Download className=\"h-8 w-8 text-purple-600\" />\n              </div>\n              <h3 className=\"text-xl font-semibold mb-4\">Policy Briefing Teams</h3>\n              <p className=\"text-muted-foreground mb-6\">\n                Provide policymakers with clear, evidence-based narratives that support \n                informed decision-making on environmental issues.\n              </p>\n              <ul className=\"text-sm space-y-2\">\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Evidence-based narratives</span>\n                </li>\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Executive summaries</span>\n                </li>\n                <li className=\"flex items-center justify-center space-x-2\">\n                  <CheckCircle className=\"h-4 w-4 text-green-600 flex-shrink-0\" />\n                  <span>Policy recommendations</span>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </section>\n\n      {/* Getting Started */}\n      <section id=\"get-started\" className=\"py-20 bg-muted/50\">\n        <div className=\"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center\">\n          <h2 className=\"text-3xl md:text-4xl font-bold mb-6\">\n            Start creating impactful science stories\n          </h2>\n          <p className=\"text-xl text-muted-foreground mb-8\">\n            Join research organizations using eoStories to transform complex findings \n            into compelling narratives that drive real-world action.\n          </p>\n          <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">\n            <Button size=\"lg\" asChild>\n              <Link href=\"/examples\">\n                <Eye className=\"h-4 w-4 mr-2\" />\n                View Story Examples\n              </Link>\n            </Button>\n            <Button variant=\"outline\" size=\"lg\" asChild>\n              <Link href=\"/docs\">\n                <BookOpen className=\"h-4 w-4 mr-2\" />\n                Documentation\n              </Link>\n            </Button>\n          </div>\n        </div>\n      </section>\n    </PageLayout>\n  )\n}\n
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { PageLayout } from '@/components/layout/shared'
+import { 
+  BookOpen, 
+  ArrowRight, 
+  CheckCircle, 
+  ExternalLink,
+  FileText,
+  Share2,
+  Download,
+  Search,
+  Zap,
+  Users,
+  Eye
+} from 'lucide-react'
+
+export default function eoStoriesPage() {
+  return (
+    <PageLayout>
+      {/* Hero Section */}
+      <section className="py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="secondary" className="mb-4">
+              Narrative-Driven Communication
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              eoStories
+              <span className="text-blue-600"> for Earth Science Storytelling</span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Transform complex research into narratives that stakeholders actually understand and remember. 
+              Combine interactive maps, charts, and compelling narrative to communicate your findings effectively.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link href="/examples">
+                  <Eye className="h-4 w-4 mr-2" />
+                  See Story Examples
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link href="#get-started">
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  Get Started
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Video Section */}
+      <section className="py-16 bg-muted/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="overflow-hidden">
+            <CardContent className="p-0">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-auto" 
+              >
+                <source src="/videos/demo-stories.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+                <h3 className="font-semibold text-lg text-blue-900 mb-2">Wildfire Risk Communication Story</h3>
+                <p className="text-sm text-blue-700">
+                  See how narrative combined with interactive visualization helps emergency managers 
+                  understand and communicate wildfire risk to their communities.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Getting Started Section */}
+      <section id="get-started" className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Start creating impactful science stories
+          </h2>
+          <p className="text-xl text-muted-foreground mb-8">
+            Join research organizations using eoStories to transform complex findings 
+            into compelling narratives that drive real-world action.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild>
+              <Link href="/examples">
+                <Eye className="h-4 w-4 mr-2" />
+                View Story Examples
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/docs">
+                <BookOpen className="h-4 w-4 mr-2" />
+                Documentation
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </PageLayout>
+  )
+}

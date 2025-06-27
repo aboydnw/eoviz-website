@@ -140,17 +140,13 @@ export default function ToolsEcosystemPage() {
                 </div>
                 
                 <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1" asChild>
-                    <Link href="#" target="_blank">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
-                    </Link>
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Demo
                   </Button>
-                  <Button size="sm" variant="outline" className="flex-1" asChild>
-                    <Link href="#" target="_blank">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </Link>
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <Github className="h-4 w-4 mr-2" />
+                    Code
                   </Button>
                 </div>
               </CardContent>
@@ -379,138 +375,6 @@ export default function ToolsEcosystemPage() {
         </div>
       </section>
 
-      {/* Integration Examples */}
-      <section className="py-20 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">See Tools Working Together</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              These tools aren't just individual utilities - they're designed to work together 
-              and integrate seamlessly with eoStories and eoCatalogs.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-2 border-blue-200">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <BookOpen className="h-6 w-6 text-blue-600" />
-                  Wildfire Risk Story + Fire Explorer
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Tell the story of wildfire risk in your region using eoStories, then embed 
-                  Fire Event Explorer to let readers explore historical fire data interactively.
-                </p>
-                <Button variant="outline" size="sm">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  View Example Integration
-                </Button>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2 border-green-200">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <Layers className="h-6 w-6 text-green-600" />
-                  Data Catalog + NASA Worldview
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Organize your satellite datasets in eoCatalogs, then link directly to 
-                  NASA Worldview for immediate visualization and exploration.
-                </p>
-                <Button variant="outline" size="sm">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  View Example Integration
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-          
-          <div className="text-center mt-8">
-            <Button asChild>
-              <Link href="/products">
-                Learn About eoStories & eoCatalogs <ArrowRight className="h-4 w-4 ml-2" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Custom Development Services */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 border-2 border-green-200">
-            <h2 className="text-3xl font-bold mb-6 text-center">Inspired by What You See?</h2>
-            <p className="text-xl text-muted-foreground mb-8 text-center">
-              Organizations in our ecosystem work with Development Seed to build custom Earth science 
-              communication tools. See something you like but need it tailored to your specific needs?
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div>
-                <h3 className="font-bold mb-4 flex items-center gap-2">
-                  <Zap className="h-5 w-5 text-orange-600" />
-                  What We Specialize In
-                </h3>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span>Tools like Fire Event Explorer for your domain</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span>eoComponents implementations and training</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span>Integration with your existing systems</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span>Complete eoViz ecosystem deployment</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="font-bold mb-4 flex items-center gap-2">
-                  <Users className="h-5 w-5 text-blue-600" />
-                  Our Track Record
-                </h3>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <Award className="h-4 w-4 text-blue-600" />
-                    <span>Built tools for NASA, USAID, World Bank</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Award className="h-4 w-4 text-blue-600" />
-                    <span>Creators of STAC specification</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Award className="h-4 w-4 text-blue-600" />
-                    <span>10+ years of Earth science tooling</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Award className="h-4 w-4 text-blue-600" />
-                    <span>Open source and cloud-native expertise</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <Button size="lg">
-                Discuss Your Custom Tool Project
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Tool Submission Section */}
       <section id="submit-tool" className="py-20 bg-muted/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -521,57 +385,6 @@ export default function ToolsEcosystemPage() {
             Have a tool that exemplifies great Earth science communication? We feature tools with 
             excellent documentation, easy deployment, and open data standards.
           </p>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12 text-left">
-            <div>
-              <h3 className="font-semibold mb-4">Submission Criteria</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Open source with clear licensing</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Production-ready with good documentation</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Uses open data sources (STAC, COG, public APIs)</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Demonstrates Earth science communication value</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Responsive design and accessibility considerations</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Submission Process</h3>
-              <ol className="space-y-3">
-                <li className="flex items-start space-x-3">
-                  <div className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</div>
-                  <span className="text-sm">Submit GitHub repository link and live demo</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</div>
-                  <span className="text-sm">Development Seed team reviews against criteria</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</div>
-                  <span className="text-sm">Tool featured in ecosystem with attribution</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</div>
-                  <span className="text-sm">Optional: Guidance on eoComponents integration</span>
-                </li>
-              </ol>
-            </div>
-          </div>
-
           <Button size="lg">
             Submit Tool for Review
           </Button>
