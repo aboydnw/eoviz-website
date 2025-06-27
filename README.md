@@ -3,6 +3,8 @@
 Marketing site for eoViz - a modular geospatial storytelling platform for research organizations. This is a prototype to test messaging and positioning before building out the full product suite.
 
 [Why eoViz in 2 slides](https://docs.google.com/presentation/d/1c7UyEPZZoJe5o4ZdbZ0NBsjoeG8E6u0ifnL-YdU05W4/edit?usp=sharing)
+[More detailed product overview](https://docs.google.com/document/d/14OBkSPFpveeDM7XgaJtB3JgNlGf_zWEVN-HUg4WbBMs/edit?usp=sharing)
+[Competitive Analysis](https://docs.google.com/document/d/17BW3ClY4UuTkdws2PMTlq8KO8fKLsVPLGZeZ87_YAKI/edit?usp=sharing)
 
 ## Background
 
