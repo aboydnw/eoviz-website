@@ -38,8 +38,8 @@ Open [http://localhost:3000](http://localhost:3000)
 - Auto-playing video demos throughout
 
 ## Current Status
-✅ Homepage, Products overview, Individual product pages  
-🚧 Documentation, Sandbox, Workshop pages (placeholders)
+✅ Initial structure and content with some placeholder AI-generated content on the deeper pages
+🚧 Fine-tuning content to better reflect positioning, flesh out tools in marketplace, add sandbox, better connection to actual repos and tools, setup flow
 
 ## Deployment
 Designed for Vercel - just connect the GitHub repo and deploy.
