@@ -123,14 +123,14 @@ export function ProductSuiteSection() {
                     <h3 className="font-semibold text-sm">Climate Mapper</h3>
                     <p className="text-xs text-muted-foreground">Climate Research Institute</p>
                   </div>
-                  <Badge variant="outline" size="sm" className="ml-auto">Simple</Badge>
+                  <Badge variant="outline" className="ml-auto text-xs">Simple</Badge>
                 </div>
                 <p className="text-xs text-muted-foreground mb-3">
                   Interactive climate data visualization with time-series analysis
                 </p>
                 <div className="flex gap-1">
-                  <Badge variant="secondary" size="sm" className="text-xs">STAC</Badge>
-                  <Badge variant="secondary" size="sm" className="text-xs">Embeddable</Badge>
+                  <Badge variant="secondary" className="text-xs">STAC</Badge>
+                  <Badge variant="secondary" className="text-xs">Embeddable</Badge>
                 </div>
               </div>
 
@@ -145,9 +145,9 @@ export function ProductSuiteSection() {
                     <p className="text-xs text-muted-foreground">Emergency Response Labs</p>
                   </div>
                   <div className="ml-auto text-right">
-                    <Badge variant="outline" size="sm">Advanced</Badge>
+                    <Badge variant="outline" className="text-xs">Advanced</Badge>
                     <div className="mt-1">
-                      <Badge variant="outline" size="sm" className="text-xs bg-green-50">Built with eoComponents</Badge>
+                      <Badge variant="outline" className="text-xs bg-green-50">Built with eoComponents</Badge>
                     </div>
                   </div>
                 </div>
@@ -155,8 +155,8 @@ export function ProductSuiteSection() {
                   Real-time wildfire risk assessment and impact modeling
                 </p>
                 <div className="flex gap-1">
-                  <Badge variant="secondary" size="sm" className="text-xs">Real-time</Badge>
-                  <Badge variant="secondary" size="sm" className="text-xs">API</Badge>
+                  <Badge variant="secondary" className="text-xs">Real-time</Badge>
+                  <Badge variant="secondary" className="text-xs">API</Badge>
                 </div>
               </div>
 
@@ -170,14 +170,14 @@ export function ProductSuiteSection() {
                     <h3 className="font-semibold text-sm">Ocean Data Explorer</h3>
                     <p className="text-xs text-muted-foreground">Marine Science Consortium</p>
                   </div>
-                  <Badge variant="outline" size="sm" className="ml-auto">Intermediate</Badge>
+                  <Badge variant="outline" className="ml-auto text-xs">Intermediate</Badge>
                 </div>
                 <p className="text-xs text-muted-foreground mb-3">
                   Comprehensive ocean data analysis with 3D visualization
                 </p>
                 <div className="flex gap-1">
-                  <Badge variant="secondary" size="sm" className="text-xs">COG</Badge>
-                  <Badge variant="secondary" size="sm" className="text-xs">3D Viz</Badge>
+                  <Badge variant="secondary" className="text-xs">COG</Badge>
+                  <Badge variant="secondary" className="text-xs">3D Viz</Badge>
                 </div>
               </div>
 
