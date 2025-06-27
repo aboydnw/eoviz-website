@@ -4,8 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { PageLayout } from '@/components/layout/shared'
 import { 
-  Search, 
-  Filter,
   ExternalLink,
   Github,
   Globe,
