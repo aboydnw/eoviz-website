@@ -19,8 +19,9 @@ export function VideoPlayer({ src, poster, className = "", children }: VideoPlay
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        const entry = entries[0]
+        if (entry && entry.isIntersecting) {
           setIsVisible(true)
           observer.disconnect()
         }
