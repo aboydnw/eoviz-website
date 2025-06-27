@@ -7,7 +7,6 @@ import {
   ExternalLink,
   Github,
   Globe,
-  ArrowRight,
   Flame,
   Satellite,
   Activity,
@@ -16,8 +15,7 @@ import {
   Cloud,
   Shield,
   BookOpen,
-  Download,
-  Layers
+  Download
 } from 'lucide-react'
 
 export default function ToolsEcosystemPage() {
