@@ -26,8 +26,8 @@ export function OptimizedImage({
   // Generate a simple blur placeholder if none provided
   const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
 
-  // Build props object conditionally to avoid undefined values
-  const imageProps: Partial<ImageProps> = {
+  // Create base props that are always present
+  const baseProps = {
     src,
     alt,
     className,
@@ -40,18 +40,23 @@ export function OptimizedImage({
     }
   }
 
-  // Only add width/height if they are defined
+  // Add optional props conditionally
+  const optionalProps: Record<string, unknown> = {}
+  
   if (width !== undefined) {
-    imageProps.width = width
+    optionalProps.width = width
   }
   if (height !== undefined) {
-    imageProps.height = height
+    optionalProps.height = height
   }
 
   // Only add blurDataURL if using blur placeholder
   if (placeholder === 'blur') {
-    imageProps.blurDataURL = blurDataURL || defaultBlurDataURL
+    optionalProps.blurDataURL = blurDataURL || defaultBlurDataURL
   }
+
+  // Combine props with proper typing
+  const imageProps = { ...baseProps, ...optionalProps } as ImageProps
 
   return <Image {...imageProps} />
 }
