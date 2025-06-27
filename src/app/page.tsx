@@ -12,7 +12,6 @@ import {
   BookOpen,
   ArrowRight,
   Play,
-  Github,
   ExternalLink
 } from 'lucide-react'
 

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
+import { PageLayout } from '@/components/layout/shared'
 import { 
   Code,
   ArrowRight,
@@ -18,40 +19,7 @@ import {
 
 export default function EoToolsPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center">
-          <div className="mr-6">
-            <Link href="/" className="flex items-center space-x-2">
-              <img 
-                src="/logos/eoviz-logo.png" 
-                alt="eoViz" 
-                className="h-8 w-auto" 
-              />
-              <span className="font-bold text-xl">eoViz</span>
-            </Link>
-          </div>
-          <div className="flex items-center space-x-6 text-sm font-medium">
-            <Link href="/products" className="hover:text-foreground/80">Products</Link>
-            <Link href="/docs" className="hover:text-foreground/80">Documentation</Link>
-            <Link href="/sandbox" className="hover:text-foreground/80">Sandbox</Link>
-            <Link href="/workshop" className="hover:text-foreground/80">Workshop</Link>
-          </div>
-          <div className="ml-auto flex items-center space-x-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="https://github.com" target="_blank">
-                <Github className="h-4 w-4 mr-2" />
-                GitHub
-              </Link>
-            </Button>
-            <Button size="sm" asChild>
-              <Link href="/sandbox">Try Demo</Link>
-            </Button>
-          </div>
-        </div>
-      </nav>
-
+    <PageLayout>
       {/* Hero Section */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -361,60 +329,6 @@ export default function EoToolsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <img 
-                  src="/logos/eoviz-logo.png" 
-                  alt="eoViz" 
-                  className="h-6 w-auto" 
-                />
-                <span className="font-bold">eoViz</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Modular geospatial storytelling platform for Earth observation data.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-3">Products</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/products/eostories" className="hover:underline">eoStories</Link></li>
-                <li><Link href="/products/eotools" className="hover:underline">eoTools</Link></li>
-                <li><Link href="/products/eocatalogs" className="hover:underline">eoCatalogs</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-3">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/docs" className="hover:underline">Documentation</Link></li>
-                <li><Link href="/sandbox" className="hover:underline">Sandbox</Link></li>
-                <li><Link href="/workshop" className="hover:underline">Workshop</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-3">Community</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="#" className="hover:underline">GitHub</Link></li>
-                <li><Link href="#" className="hover:underline">Contact</Link></li>
-                <li><Link href="#" className="hover:underline">Support</Link></li>
-              </ul>
-            </div>
-          </div>
-          <Separator className="my-8" />
-          <div className="text-center text-sm text-muted-foreground space-y-2">
-            <div>
-              © 2025 eoViz. Open source tools for Earth observation storytelling.
-            </div>
-            <div>
-              Built with support from NASA IMPACT and the Earth Science Data Systems Program. 
-              Part of the global effort to make Earth science data more accessible and actionable.
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </PageLayout>
   )
 }
