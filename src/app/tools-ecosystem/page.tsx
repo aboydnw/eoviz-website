@@ -17,7 +17,18 @@ import {
   Map,
   BarChart3,
   ArrowRight,
-  Plus
+  Plus,
+  Flame,
+  Satellite,
+  Activity,
+  Droplets,
+  Waves,
+  Cloud,
+  Shield,
+  BookOpen,
+  Download,
+  Award,
+  Layers
 } from 'lucide-react'
 
 export default function ToolsEcosystemPage() {
@@ -35,14 +46,14 @@ export default function ToolsEcosystemPage() {
               Tools Ecosystem
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Discover community-built tools that share eoViz principles. Production-ready Earth science tools 
-              from organizations worldwide, all featuring excellent documentation, easy deployment, and 
-              commitment to open data standards.
+              Production-ready Earth science tools from organizations worldwide. 
+              All feature excellent documentation, easy deployment, and commitment to open data standards. 
+              Use them in your projects or let them inspire your own custom development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="#browse-tools">
-                  Browse Tools
+                <Link href="#featured-tools">
+                  Browse 6 Featured Tools
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
@@ -55,319 +66,447 @@ export default function ToolsEcosystemPage() {
         </div>
       </section>
 
-      {/* Value Proposition */}
+      {/* Built on Open Science Principles */}
       <section className="py-16 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">For eoViz Users</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-2 rounded-lg">
-                    <CheckCircle className="h-5 w-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Production-Ready</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Battle-tested tools, not prototypes. Each tool has been used in real projects 
-                      and maintained by active development teams.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-green-100 p-2 rounded-lg">
-                    <Zap className="h-5 w-5 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Integration-Friendly</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Built to work together and with eoViz products. Many tools can be embedded 
-                      in eoStories or connected to eoCatalogs.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-purple-100 p-2 rounded-lg">
-                    <Code className="h-5 w-5 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Open Source</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Deploy anywhere, modify as needed. Full source code available with 
-                      clear licensing and contribution guidelines.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 p-2 rounded-lg">
-                    <Users className="h-5 w-5 text-orange-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Well-Documented</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Clear setup guides, API documentation, and examples. Get started 
-                      quickly without guessing how things work.
-                    </p>
-                  </div>
-                </div>
+          <div className="text-center mb-12 bg-blue-50 rounded-2xl p-8">
+            <h3 className="text-xl font-bold mb-4">Built on Open Science Principles</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <Shield className="h-8 w-8 mx-auto text-blue-600 mb-3" />
+                <h4 className="font-semibold mb-2">Government-Backed Reliability</h4>
+                <p className="text-sm text-muted-foreground">NASA, USGS, and NOAA provide institutional trust and scientific accuracy</p>
               </div>
-            </div>
-            
-            <div>
-              <h2 className="text-3xl font-bold mb-6">For Tool Providers</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-2 rounded-lg">
-                    <Globe className="h-5 w-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Expanded Reach</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Showcase your tools to the growing eoViz community. Connect with researchers, 
-                      developers, and organizations who could benefit from your work.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-green-100 p-2 rounded-lg">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Standards Recognition</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Demonstrate your commitment to modern geospatial practices and 
-                      open data standards to the Earth science community.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-purple-100 p-2 rounded-lg">
-                    <Users className="h-5 w-5 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Community Building</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Connect with other developers solving similar problems. Share knowledge 
-                      and collaborate on advancing Earth science tooling.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 p-2 rounded-lg">
-                    <Zap className="h-5 w-5 text-orange-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">Technical Leadership</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Influence emerging patterns in Earth science tooling. Help shape 
-                      the future of geospatial communication tools.
-                    </p>
-                  </div>
-                </div>
+              <div>
+                <Zap className="h-8 w-8 mx-auto text-green-600 mb-3" />
+                <h4 className="font-semibold mb-2">Expert Development Examples</h4>
+                <p className="text-sm text-muted-foreground">See how professional teams build tools using modern development practices</p>
+              </div>
+              <div>
+                <Globe className="h-8 w-8 mx-auto text-purple-600 mb-3" />
+                <h4 className="font-semibold mb-2">Open Data Foundation</h4>
+                <p className="text-sm text-muted-foreground">All tools use publicly available data with no API keys or licensing barriers</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tools Browser Section */}
-      <section id="browse-tools" className="py-20">
+      {/* Featured Tools Section */}
+      <section id="featured-tools" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Browse Community Tools
+              Featured Tools Collection
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Use them in your projects or let them inspire your own custom development
+              Carefully selected tools that demonstrate excellence in Earth science communication 
+              and modern development practices.
             </p>
           </div>
 
-          {/* Filter Section */}
-          <div className="mb-8 p-6 bg-muted/50 rounded-lg">
-            <div className="flex items-center gap-4 mb-4">
-              <Search className="h-5 w-5 text-muted-foreground" />
-              <span className="text-sm font-medium">Filter & Search Tools</span>
-            </div>
-            <div className="grid md:grid-cols-4 gap-4">
-              <div>
-                <label className="text-sm font-medium mb-2 block">Complexity Level</label>
-                <div className="space-y-1">
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Simple</Badge>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Intermediate</Badge>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Advanced</Badge>
-                </div>
-              </div>
-              <div>
-                <label className="text-sm font-medium mb-2 block">Data Type</label>
-                <div className="space-y-1">
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Satellite Imagery</Badge>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Climate Data</Badge>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Geospatial Vectors</Badge>
-                </div>
-              </div>
-              <div>
-                <label className="text-sm font-medium mb-2 block">Use Case</label>
-                <div className="space-y-1">
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Visualization</Badge>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Analysis</Badge>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Communication</Badge>
-                </div>
-              </div>
-              <div>
-                <label className="text-sm font-medium mb-2 block">Integration</label>
-                <div className="space-y-1">
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Embeddable</Badge>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">API Available</Badge>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-muted">Themeable</Badge>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Sample Tool Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            {/* Tool Card 1 */}
-            <Card className="group hover:shadow-lg transition-shadow">
+            {/* Fire Event Explorer */}
+            <Card className="group hover:shadow-lg transition-shadow border-2 border-orange-200">
               <CardHeader className="pb-4">
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg mb-4 flex items-center justify-center">
-                  <Map className="h-12 w-12 text-blue-600" />
+                <div className="aspect-video bg-gradient-to-br from-red-100 to-orange-200 rounded-lg mb-4 flex items-center justify-center">
+                  <Flame className="h-12 w-12 text-red-600" />
                 </div>
                 <div className="flex items-start justify-between">
                   <div>
-                    <CardTitle className="text-lg">Climate Mapper</CardTitle>
-                    <CardDescription className="text-sm">by Climate Research Institute</CardDescription>
-                  </div>
-                  <Badge variant="secondary" className="text-xs">Simple</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  Interactive climate data visualization tool with time-series analysis and 
-                  scenario comparison features.
-                </p>
-                
-                <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">STAC</Badge>
-                  <Badge variant="outline" size="sm">Climate Data</Badge>
-                  <Badge variant="outline" size="sm">Embeddable</Badge>
-                </div>
-                
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Demo
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Tool Card 2 */}
-            <Card className="group hover:shadow-lg transition-shadow">
-              <CardHeader className="pb-4">
-                <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 rounded-lg mb-4 flex items-center justify-center">
-                  <BarChart3 className="h-12 w-12 text-green-600" />
-                </div>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle className="text-lg">Wildfire Analytics</CardTitle>
-                    <CardDescription className="text-sm">by Emergency Response Labs</CardDescription>
+                    <CardTitle className="text-lg">Fire Event Explorer</CardTitle>
+                    <CardDescription className="text-sm">by Development Seed</CardDescription>
                   </div>
                   <div className="text-right">
                     <Badge variant="secondary" className="text-xs">Intermediate</Badge>
                     <div className="mt-1">
-                      <Badge variant="outline" size="sm" className="text-xs">Built with eoComponents</Badge>
+                      <Badge variant="outline" size="sm" className="text-xs bg-green-50 border-green-200">Built with eoComponents</Badge>
                     </div>
                   </div>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-muted-foreground">
-                  Real-time wildfire risk assessment and impact modeling for emergency 
-                  management teams.
+                  Explore wildfire perimeters, track fire progression over time, and analyze burn severity. 
+                  Perfect for emergency management and fire risk communication.
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">Satellite</Badge>
+                  <Badge variant="outline" size="sm">STAC</Badge>
+                  <Badge variant="outline" size="sm">Satellite Data</Badge>
+                  <Badge variant="outline" size="sm">Embeddable</Badge>
                   <Badge variant="outline" size="sm">Real-time</Badge>
-                  <Badge variant="outline" size="sm">API</Badge>
                 </div>
                 
                 <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Demo
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="#" target="_blank">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </Link>
                   </Button>
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="#" target="_blank">
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Tool Card 3 */}
+            {/* NASA Worldview */}
             <Card className="group hover:shadow-lg transition-shadow">
               <CardHeader className="pb-4">
-                <div className="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg mb-4 flex items-center justify-center">
-                  <Database className="h-12 w-12 text-purple-600" />
+                <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-200 rounded-lg mb-4 flex items-center justify-center">
+                  <Satellite className="h-12 w-12 text-blue-600" />
                 </div>
                 <div className="flex items-start justify-between">
                   <div>
-                    <CardTitle className="text-lg">Ocean Data Explorer</CardTitle>
-                    <CardDescription className="text-sm">by Marine Science Consortium</CardDescription>
+                    <CardTitle className="text-lg">NASA Worldview</CardTitle>
+                    <CardDescription className="text-sm">by NASA GIBS</CardDescription>
                   </div>
-                  <Badge variant="secondary" className="text-xs">Advanced</Badge>
+                  <Badge variant="secondary" className="text-xs">Simple</Badge>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-muted-foreground">
-                  Comprehensive ocean data analysis platform with 3D visualization and 
-                  advanced filtering capabilities.
+                  Browse over 1,200 global satellite imagery layers with near real-time data. 
+                  Perfect for showing environmental events and changes over time.
                 </p>
                 
                 <div className="flex flex-wrap gap-1">
-                  <Badge variant="outline" size="sm">COG</Badge>
-                  <Badge variant="outline" size="sm">Ocean Data</Badge>
-                  <Badge variant="outline" size="sm">3D Viz</Badge>
+                  <Badge variant="outline" size="sm">MODIS</Badge>
+                  <Badge variant="outline" size="sm">Landsat</Badge>
+                  <Badge variant="outline" size="sm">Near Real-time</Badge>
+                  <Badge variant="outline" size="sm">Global Coverage</Badge>
                 </div>
                 
                 <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Demo
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://worldview.earthdata.nasa.gov/" target="_blank">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </Link>
                   </Button>
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://www.earthdata.nasa.gov/data/tools/worldview" target="_blank">
+                      <BookOpen className="h-4 w-4 mr-2" />
+                      Docs
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            {/* More tools message */}
-            <Card className="group hover:shadow-lg transition-shadow border-dashed">
-              <CardContent className="flex flex-col items-center justify-center h-full text-center p-8">
-                <Plus className="h-12 w-12 text-muted-foreground mb-4" />
-                <h3 className="font-semibold mb-2">More Tools Coming</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  We're actively curating and adding high-quality Earth science tools to the ecosystem.
+            {/* USGS Earthquake */}
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardHeader className="pb-4">
+                <div className="aspect-video bg-gradient-to-br from-amber-100 to-red-200 rounded-lg mb-4 flex items-center justify-center">
+                  <Activity className="h-12 w-12 text-amber-600" />
+                </div>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <CardTitle className="text-lg">Real-time Earthquakes</CardTitle>
+                    <CardDescription className="text-sm">by USGS</CardDescription>
+                  </div>
+                  <Badge variant="secondary" className="text-xs">Simple</Badge>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  Monitor global earthquake activity in real-time with magnitude, depth, and location data. 
+                  Essential for disaster response and seismic risk assessment.
+                </p>
+                
+                <div className="flex flex-wrap gap-1">
+                  <Badge variant="outline" size="sm">Real-time</Badge>
+                  <Badge variant="outline" size="sm">Global</Badge>
+                  <Badge variant="outline" size="sm">ANSS Network</Badge>
+                  <Badge variant="outline" size="sm">Filtering</Badge>
+                </div>
+                
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </Link>
+                  </Button>
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://www.usgs.gov/programs/earthquake-hazards/earthquakes" target="_blank">
+                      <Download className="h-4 w-4 mr-2" />
+                      Data
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* USGS Water Data Dashboard */}
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardHeader className="pb-4">
+                <div className="aspect-video bg-gradient-to-br from-cyan-100 to-blue-200 rounded-lg mb-4 flex items-center justify-center">
+                  <Droplets className="h-12 w-12 text-cyan-600" />
+                </div>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <CardTitle className="text-lg">Water Data Dashboard</CardTitle>
+                    <CardDescription className="text-sm">by USGS</CardDescription>
+                  </div>
+                  <Badge variant="secondary" className="text-xs">Simple</Badge>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  Real-time water monitoring including stream flow, groundwater levels, and water quality 
+                  from thousands of monitoring stations across the United States.
+                </p>
+                
+                <div className="flex flex-wrap gap-1">
+                  <Badge variant="outline" size="sm">Real-time</Badge>
+                  <Badge variant="outline" size="sm">Water Resources</Badge>
+                  <Badge variant="outline" size="sm">Station Network</Badge>
+                  <Badge variant="outline" size="sm">Mobile-friendly</Badge>
+                </div>
+                
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://dashboard.waterdata.usgs.gov/" target="_blank">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </Link>
+                  </Button>
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://waterdata.usgs.gov/" target="_blank">
+                      <Download className="h-4 w-4 mr-2" />
+                      Data
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* NASA Ocean Color */}
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardHeader className="pb-4">
+                <div className="aspect-video bg-gradient-to-br from-teal-100 to-emerald-200 rounded-lg mb-4 flex items-center justify-center">
+                  <Waves className="h-12 w-12 text-teal-600" />
+                </div>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <CardTitle className="text-lg">Ocean Color Web</CardTitle>
+                    <CardDescription className="text-sm">by NASA Ocean Biology</CardDescription>
+                  </div>
+                  <Badge variant="secondary" className="text-xs">Intermediate</Badge>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  Ocean color and temperature data visualization showing chlorophyll concentrations, 
+                  sea surface temperature, and marine ecosystem indicators.
+                </p>
+                
+                <div className="flex flex-wrap gap-1">
+                  <Badge variant="outline" size="sm">MODIS</Badge>
+                  <Badge variant="outline" size="sm">VIIRS</Badge>
+                  <Badge variant="outline" size="sm">Ocean Health</Badge>
+                  <Badge variant="outline" size="sm">Climate Indicators</Badge>
+                </div>
+                
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://oceancolor.gsfc.nasa.gov/" target="_blank">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </Link>
+                  </Button>
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://oceandata.sci.gsfc.nasa.gov/" target="_blank">
+                      <Download className="h-4 w-4 mr-2" />
+                      Data
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* NOAA Climate Explorer */}
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardHeader className="pb-4">
+                <div className="aspect-video bg-gradient-to-br from-violet-100 to-purple-200 rounded-lg mb-4 flex items-center justify-center">
+                  <Cloud className="h-12 w-12 text-violet-600" />
+                </div>
+                <div className="flex items-start justify-between">
+                  <div>
+                    <CardTitle className="text-lg">Climate Explorer</CardTitle>
+                    <CardDescription className="text-sm">by NOAA/NEMAC</CardDescription>
+                  </div>
+                  <Badge variant="secondary" className="text-xs">Intermediate</Badge>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  Climate data exploration for the United States showing historical trends, 
+                  future projections, and extreme weather analysis for local decision-making.
+                </p>
+                
+                <div className="flex flex-wrap gap-1">
+                  <Badge variant="outline" size="sm">Climate Data</Badge>
+                  <Badge variant="outline" size="sm">Projections</Badge>
+                  <Badge variant="outline" size="sm">County-level</Badge>
+                  <Badge variant="outline" size="sm">Policy Support</Badge>
+                </div>
+                
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://crt-climate-explorer.nemac.org/" target="_blank">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </Link>
+                  </Button>
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <Link href="https://toolkit.climate.gov/tool/climate-explorer" target="_blank">
+                      <BookOpen className="h-4 w-4 mr-2" />
+                      Docs
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Integration Examples */}
+      <section className="py-20 bg-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">See Tools Working Together</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              These tools aren't just individual utilities - they're designed to work together 
+              and integrate seamlessly with eoStories and eoCatalogs.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="border-2 border-blue-200">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <BookOpen className="h-6 w-6 text-blue-600" />
+                  Wildfire Risk Story + Fire Explorer
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Tell the story of wildfire risk in your region using eoStories, then embed 
+                  Fire Event Explorer to let readers explore historical fire data interactively.
                 </p>
                 <Button variant="outline" size="sm">
-                  Submit Your Tool
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View Example Integration
                 </Button>
               </CardContent>
             </Card>
+            
+            <Card className="border-2 border-green-200">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Layers className="h-6 w-6 text-green-600" />
+                  Data Catalog + NASA Worldview
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Organize your satellite datasets in eoCatalogs, then link directly to 
+                  NASA Worldview for immediate visualization and exploration.
+                </p>
+                <Button variant="outline" size="sm">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View Example Integration
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="text-center mt-8">
+            <Button asChild>
+              <Link href="/products">
+                Learn About eoStories & eoCatalogs <ArrowRight className="h-4 w-4 ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Custom Development Services */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 border-2 border-green-200">
+            <h2 className="text-3xl font-bold mb-6 text-center">Inspired by What You See?</h2>
+            <p className="text-xl text-muted-foreground mb-8 text-center">
+              Organizations in our ecosystem work with Development Seed to build custom Earth science 
+              communication tools. See something you like but need it tailored to your specific needs?
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="font-bold mb-4 flex items-center gap-2">
+                  <Zap className="h-5 w-5 text-orange-600" />
+                  What We Specialize In
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>Tools like Fire Event Explorer for your domain</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>eoComponents implementations and training</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>Integration with your existing systems</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>Complete eoViz ecosystem deployment</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="font-bold mb-4 flex items-center gap-2">
+                  <Users className="h-5 w-5 text-blue-600" />
+                  Our Track Record
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2">
+                    <Award className="h-4 w-4 text-blue-600" />
+                    <span>Built tools for NASA, USAID, World Bank</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Award className="h-4 w-4 text-blue-600" />
+                    <span>Creators of STAC specification</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Award className="h-4 w-4 text-blue-600" />
+                    <span>10+ years of Earth science tooling</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Award className="h-4 w-4 text-blue-600" />
+                    <span>Open source and cloud-native expertise</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Button size="lg">
+                Discuss Your Custom Tool Project
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -436,30 +575,6 @@ export default function ToolsEcosystemPage() {
           <Button size="lg">
             Submit Tool for Review
           </Button>
-        </div>
-      </section>
-
-      {/* Custom Development CTA */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Custom Development Services
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Many organizations in our ecosystem work with Development Seed for custom tool development. 
-            See something you like but need it tailored to your specific needs? We specialize in building 
-            Earth science communication tools that integrate seamlessly with modern data infrastructure.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="/products">
-                View Our Products
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg">
-              Discuss Your Custom Tool Project
-            </Button>
-          </div>
         </div>
       </section>
 

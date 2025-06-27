@@ -64,7 +64,7 @@ export function SiteHeader() {
           <Link href="/tools-ecosystem" className="hover:text-foreground/80">Tools Ecosystem</Link>
           <Link href="/docs" className="hover:text-foreground/80">Documentation</Link>
           <Link href="/examples" className="hover:text-foreground/80">Examples</Link>
-          <Link href="/workshop" className="hover:text-foreground/80">Workshop</Link>
+          <Link href="/workshop" className="hover:text-foreground/80">ESIP Workshop</Link>
         </div>
         <div className="ml-auto flex items-center space-x-4">
           <Button variant="ghost" size="sm" asChild>
