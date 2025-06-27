@@ -32,11 +32,11 @@ export const homepage = {
         },
         {
           bold: "Funding opportunities slip away", 
-          text: "stakeholders who don't understand your value won't invest in your future"
+          text: "stakeholders who don&apos;t understand your value won&apos;t invest in your future"
         },
         {
           bold: "Scientists waste time",
-          text: "answering the same questions over and over because people can't access data themselves"
+          text: "answering the same questions over and over because people can&apos;t access data themselves"
         },
         {
           bold: "Problems persist",
@@ -68,8 +68,8 @@ export const homepage = {
   },
 
   guide: {
-    headline: "We've been there. We've seen brilliant research get overlooked because of communication barriers.",
-    description: "Over the past decade, we've worked with NASA and dozens of research organizations who faced the same frustrations: data sitting unused, stakeholders who don't understand findings, and expensive custom tool development that takes months.",
+    headline: "We&apos;ve been there. We&apos;ve seen brilliant research get overlooked because of communication barriers.",
+    description: "Over the past decade, we&apos;ve worked with NASA and dozens of research organizations who faced the same frustrations: data sitting unused, stakeholders who don&apos;t understand findings, and expensive custom tool development that takes months.",
     credentials: [
       {
         title: "5-10 NASA Groups",
@@ -96,8 +96,8 @@ export const homepage = {
   },
 
   productSuite: {
-    headline: "Here's how we help you turn complex data into clear impact",
-    description: "Whether you need compelling stories, custom visualization tools, or organized data platforms, we've created a simple path to get your research the attention it deserves.",
+    headline: "Here&apos;s how we help you turn complex data into clear impact",
+    description: "Whether you need compelling stories, custom visualization tools, or organized data platforms, we&apos;ve created a simple path to get your research the attention it deserves.",
     
     plan: {
       title: "Our 3-Step Process",
@@ -105,7 +105,7 @@ export const homepage = {
         {
           number: 1,
           title: "Choose Your Approach",
-          description: "Tell us about your data and communication goals. We'll help you determine whether you need stories, tools, catalogs, or a combination."
+          description: "Tell us about your data and communication goals. We&apos;ll help you determine whether you need stories, tools, catalogs, or a combination."
         },
         {
           number: 2,
@@ -130,7 +130,7 @@ export const homepage = {
         description: "Turn complex research into narratives that stakeholders actually understand and remember",
         benefits: [
           "Decision-makers understand your research impact",
-          "Funders see clear evidence of your work's value", 
+          "Funders see clear evidence of your work&apos;s value", 
           "Media coverage that accurately represents your findings",
           "Policy makers have the context they need to act"
         ],
@@ -202,24 +202,10 @@ export const homepage = {
     ]
   },
 
-  // Simplified final CTA - focus on the two most effective paths
   cta: {
     badge: "Ready to Get Started?",
-    headline: "Let's help your research reach the people who need it",
-    description: "See how eoViz works with your data, or talk with our team about your specific challenges.",
-    primaryAction: {
-      text: "Schedule Discovery Call",
-      href: "#contact"
-    },
-    secondaryAction: {
-      text: "Explore Examples First",
-      href: "/sandbox"
-    }
-=======
-  cta: {
-    badge: "Ready to Get Started?",
-    headline: "Let's help your research reach the people who need it",
-    description: "Whether you're ready to dive in or want to learn more about how other research organizations are solving these challenges, we're here to help.",
+    headline: "Let&apos;s help your research reach the people who need it",
+    description: "Whether you&apos;re ready to dive in or want to learn more about how other research organizations are solving these challenges, we&apos;re here to help.",
     primaryActions: [
       {
         text: "Schedule Discovery Call",

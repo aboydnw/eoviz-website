@@ -37,7 +37,7 @@ export function GlobalErrorHandler() {
         
         // Add fallback handling for images
         if (target.tagName === 'IMG') {
-          const img = target as HTMLImageElement
+          // const img = target as HTMLImageElement
           // You could set a fallback image here
           // img.src = '/images/fallback.png'
         }
