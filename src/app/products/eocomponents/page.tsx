@@ -5,13 +5,11 @@ import { Badge } from '@/components/ui/badge'
 import { PageLayout } from '@/components/layout/shared'
 import { 
   Code, 
-  ArrowRight, 
   CheckCircle, 
   BookOpen,
   Github,
   Zap,
   Layers,
-  Download,
   Settings,
   Palette,
   Database,
