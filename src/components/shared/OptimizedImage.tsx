@@ -26,21 +26,32 @@ export function OptimizedImage({
   // Generate a simple blur placeholder if none provided
   const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
 
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      priority={priority}
-      placeholder={placeholder}
-      blurDataURL={blurDataURL || defaultBlurDataURL}
-      sizes={sizes}
-      style={{
-        maxWidth: '100%',
-        height: 'auto',
-      }}
-    />
-  )
+  // Build props object conditionally to avoid undefined values
+  const imageProps: any = {
+    src,
+    alt,
+    className,
+    priority,
+    placeholder,
+    sizes,
+    style: {
+      maxWidth: '100%',
+      height: 'auto',
+    }
+  }
+
+  // Only add width/height if they are defined
+  if (width !== undefined) {
+    imageProps.width = width
+  }
+  if (height !== undefined) {
+    imageProps.height = height
+  }
+
+  // Only add blurDataURL if using blur placeholder
+  if (placeholder === 'blur') {
+    imageProps.blurDataURL = blurDataURL || defaultBlurDataURL
+  }
+
+  return <Image {...imageProps} />
 }
