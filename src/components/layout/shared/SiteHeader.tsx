@@ -61,10 +61,9 @@ export function SiteHeader() {
         </div>
         <div className="flex items-center space-x-6 text-sm font-medium">
           <Link href="/products" className="hover:text-foreground/80">Products</Link>
-          <Link href="/tools-ecosystem" className="hover:text-foreground/80">Tools Ecosystem</Link>
           <Link href="/docs" className="hover:text-foreground/80">Documentation</Link>
           <Link href="/examples" className="hover:text-foreground/80">Examples</Link>
-          <Link href="/workshop" className="hover:text-foreground/80">ESIP Workshop</Link>
+          <Link href="/workshop" className="hover:text-foreground/80">Workshop</Link>
         </div>
         <div className="ml-auto flex items-center space-x-4">
           <Button variant="ghost" size="sm" asChild>

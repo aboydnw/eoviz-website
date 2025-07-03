@@ -32,7 +32,7 @@ export function SiteFooter() {
           <ul className="space-y-2 text-sm">
           <li><Link href="/docs" className="hover:underline">Documentation</Link></li>
           <li><Link href="/examples" className="hover:underline">Examples</Link></li>
-          <li><Link href="/tools-ecosystem" className="hover:underline">Tools Ecosystem</Link></li>
+          <li><Link href="https://open-earth-tools.vercel.app/" target="_blank" className="hover:underline">Tools Directory</Link></li>
             <li><Link href="/workshop" className="hover:underline">Workshop</Link></li>
             </ul>
             </div>
