@@ -33,7 +33,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-3">Community</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/tools-ecosystem" className="hover:underline">Tools Ecosystem</Link></li>
+              <li><Link href="https://open-earth-tools.vercel.app/" target="_blank" className="hover:underline">Tools Directory</Link></li>
               <li><Link href="#" className="hover:underline">GitHub</Link></li>
               <li><Link href="#" className="hover:underline">Contact</Link></li>
             </ul>
