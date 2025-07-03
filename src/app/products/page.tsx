@@ -165,7 +165,7 @@ export default function ProductsPage() {
                     </Link>
                   </Button>
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href="/tools-ecosystem">
+                    <Link href="https://open-earth-tools.vercel.app/" target="_blank">
                       See Components in Action
                     </Link>
                   </Button>
@@ -348,8 +348,8 @@ export default function ProductsPage() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/tools-ecosystem">
-                Explore Tools
+              <Link href="https://open-earth-tools.vercel.app/" target="_blank">
+                Explore Tools Directory
               </Link>
             </Button>
           </div>

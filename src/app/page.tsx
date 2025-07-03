@@ -199,16 +199,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tools Ecosystem Community Section */}
+      {/* Open Earth Tools Directory Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Growing Community of Earth Science Tools
+              Discover Tools and Data for Your Stories
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-              Research organizations worldwide are building Earth science communication tools using eoViz principles. 
-              These tools work together, share data standards, and accelerate scientific impact.
+              The Open Earth Tools Directory showcases production-ready Earth science tools from NASA, USGS, NOAA, and the community. 
+              Find inspiring examples, embeddable tools for your stories, and see eoComponents in action.
             </p>
             
             {/* Value Props Grid */}
@@ -217,33 +217,33 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Zap className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="font-semibold text-sm mb-2">Faster Development</h3>
+                <h3 className="font-semibold text-sm mb-2">Story Inspiration</h3>
                 <p className="text-xs text-muted-foreground">
-                  Start with proven tools and components instead of building from scratch
+                  Discover interesting Earth science tools and data that you can embed in your stories
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Users className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="font-semibold text-sm mb-2">Shared Standards</h3>
+                <h3 className="font-semibold text-sm mb-2">eoComponents Examples</h3>
                 <p className="text-xs text-muted-foreground">
-                  Tools work together using open data formats and integration patterns
+                  See how organizations are building tools with eoComponents and modern development practices
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Globe className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="font-semibold text-sm mb-2">Bigger Impact</h3>
+                <h3 className="font-semibold text-sm mb-2">Build Ideas</h3>
                 <p className="text-xs text-muted-foreground">
-                  Connect your tools to a network that amplifies scientific communication
+                  Get inspired by the types of tools you can build for your own projects and data
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Horizontal scrolling showcase */}
+          {/* Featured Tools Preview */}
           <div className="mb-8">
             <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
               {/* Tool Preview 1 - Fire Event Explorer */}
@@ -330,8 +330,8 @@ export default function HomePage() {
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="outline" size="lg" asChild>
-                <Link href="/tools-ecosystem">
-                  Explore Community Tools <ArrowRight className="h-4 w-4 ml-2" />
+                <Link href="https://open-earth-tools.vercel.app/" target="_blank">
+                  Explore Open Earth Tools Directory <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               </Button>
               <Button variant="ghost" size="lg" asChild>
