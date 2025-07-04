@@ -1,6 +1,6 @@
 import { PageLayout } from '@/components/layout/shared'
 import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Calendar, MapPin, Users, BookOpen } from 'lucide-react'
 
 export default function WorkshopPage() {
